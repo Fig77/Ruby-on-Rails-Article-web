@@ -1,10 +1,7 @@
 class ArticlesController < ApplicationController
-  def index
-  end
+  def index; end
 
-  def create
-  end
+  def create; end
 
-  def show
-  end
+  def show; end
 end

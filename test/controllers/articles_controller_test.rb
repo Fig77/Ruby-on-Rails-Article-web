@@ -1,16 +1,12 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-
+  test 'should get index' do
   end
 
-  test "should get create" do
-
+  test 'should get create' do
   end
 
-  test "should get show" do
-
+  test 'should get show' do
   end
-
 end
