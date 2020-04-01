@@ -2,11 +2,13 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   setup do
-  	@u1 = users(:one)
+  	@u1 = users(:u_1)
+  	@artic = articles(:article_1)
   end
-
-  test 'User should have a Collection of Associations' do
-  	col = 'Is not a collection'
-    assert_kind_of(@u1.articles, Association::CollectionProxy.new, col)
+ 
+  test 'User should have a collection of articles' do
+    assert_equal(1, @u1.articles.size, 'Does have a collection')
+    assert_includes(@u1.articles, @artic, 'Collection does not contain
+    	           user article')
   end
 end

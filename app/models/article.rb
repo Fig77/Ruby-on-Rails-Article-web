@@ -5,5 +5,5 @@ class Article < ApplicationRecord
   has_many :votes
 
   validates :text, presence: true, length: { minimum: 70 }
-  validates :title, presence: true, length: { maximum: 70 }
+  #validates :title, presence: true, length: { minimum: 5 }&&{maximum: 70 }
 end
