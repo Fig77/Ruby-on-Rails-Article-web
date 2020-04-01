@@ -19,11 +19,26 @@ class ArticleTest < ActiveSupport::TestCase
 
   test 'Article can have many categories' do
     assert_equal(2, @article.categories.size, 'Does not have a collection')
-    assert_includes(@article.categories, categories(:two),
+    assert_includes(@article.categories, categories(:review),
                     'Does not include all categories from this article')
   end
 
   test 'Article can have many votes' do
     assert_equal(2, @article.votes.size, 'Does not have a collection')
   end
+
+  ## Testing logic
+
+
+  test 'feature should get most voted article' do
+  end
+
+  test 'recent_all should get most recent articles per category' do
+  end
+
+  test 'featuire_from should get 3 most recent article from category' do
+  end
+
+
+
 end

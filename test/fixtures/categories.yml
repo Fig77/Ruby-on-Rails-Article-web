@@ -1,11 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-category_one:
-  id: 1
-  name: MyString
+upcoming:
+  id: 0
+  name: Upcoming
   priority: 1
 
-two:
+review:
+  id: 1
+  name: Review
+  priority: 1
+
+analysis:
   id: 2
-  name: MyString2
+  name: Analysis
+  priority: 1
+
+tops:
+  id: 3
+  name: tops
   priority: 1
