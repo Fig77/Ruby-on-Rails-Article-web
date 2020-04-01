@@ -22,4 +22,9 @@ class ArticleTest < ActiveSupport::TestCase
   	assert_includes(@article.categories, categories(:two),
   		           'Does not include all categories from this article')
   end
+
+  test 'Article can have many votes' do
+  	assert_equal(2, @article.votes.size, 'Does not have a collection')
+  end
+
 end

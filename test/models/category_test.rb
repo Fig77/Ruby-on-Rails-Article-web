@@ -1,7 +1,5 @@
 require 'test_helper'
 
 class CategoryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  # Will not be tested due to being created by admin, and he is flalwess.
 end

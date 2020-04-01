@@ -7,3 +7,7 @@
 u_1:
   id: 1
   email: 'foo@bar.com'
+
+u_2:
+  id: 2
+  email: 'foo1@bar.com'

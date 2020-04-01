@@ -11,4 +11,8 @@ class UserTest < ActiveSupport::TestCase
     assert_includes(@u1.articles, @artic, 'Collection does not contain
     	           user article')
   end
+
+  test 'User can have many votes' do
+  	assert_equal(1, @u1.votes.size, 'Does not have a collection')
+  end
 end
