@@ -24,21 +24,18 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test 'Article can have many votes' do
-    assert_equal(2, @article.votes.size, 'Does not have a collection')
+    assert_equal(2, @article.votes.count, 'Does not have a collection')
+  end
+
+  ## Actions
+
+  test 'Only logged user can creat a new article' do
   end
 
   ## Testing logic
 
-
   test 'feature should get most voted article' do
+    assert_equal(@article.id, Article.feature.id, 'Does not return the most voted
+                article. ')
   end
-
-  test 'recent_all should get most recent articles per category' do
-  end
-
-  test 'featuire_from should get 3 most recent article from category' do
-  end
-
-
-
 end

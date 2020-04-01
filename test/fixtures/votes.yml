@@ -9,3 +9,8 @@ two:
   id: 2
   user_id: 2
   article_id: 1
+
+three:
+  id: 3
+  user_id: 1
+  article_id: 2

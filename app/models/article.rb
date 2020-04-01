@@ -13,17 +13,14 @@ class Article < ApplicationRecord
   scope :feature, -> { ordered_by_priority.first }
   ######
 
-  def self.recent_all
-    #temp = []
-    #Category.count.times do |c|
-    #  temp.push(Category.find(c).articles.ordered_by_most_recent.first)
-    #end
-    #temp
+  after_save do
+    puts 'wow'
   end
 
   def self.featured_from(number, selected)
     Category.find(selected).include(:articles).ordered_by_priority(number)
   end
+
 
   # Validations
 
