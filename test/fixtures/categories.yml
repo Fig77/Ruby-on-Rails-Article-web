@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+category_one:
+  id: 1
+  name: MyString
+  priority: 1
+
+two:
+  id: 2
+  name: MyString2
+  priority: 1
