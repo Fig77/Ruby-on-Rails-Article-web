@@ -4,6 +4,6 @@ class Article < ApplicationRecord
   has_many :categories, through: :article_categories
   has_many :votes
 
-  validates :text, presence: true, length: { minimum: 70 }
-  #validates :title, presence: true, length: { minimum: 5 }&&{maximum: 70 }
+  validates :text, length: { minimum: 70 }, presence: true
+  validates :title, length: { in: 5..70 }, presence: true
 end
