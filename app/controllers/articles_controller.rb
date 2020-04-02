@@ -16,7 +16,9 @@ class ArticlesController < ApplicationController
     @article.save ? (redirect_to index_path) : (render :new)
   end
 
-  def show; end
+  def show
+    @article = Article.find(params[:id])
+  end
 
   private
 
