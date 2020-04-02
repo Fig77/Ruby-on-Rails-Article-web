@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    articles_index
+    @index_data = articles_index
   end
 
   def new
@@ -23,12 +23,11 @@ class ArticlesController < ApplicationController
   private
 
   def articles_index
-    { # Refactor later into one query
-      'feature' => Article.feature
-      # 'recent_all' => Category.recent_all
-      # 'selected_feature' => featured_from(3, @selected)
-    }
-    @articles_all = Article.feature
+    data = { 
+      'feature' => Article.feature,
+      'new_from_categories' => Category.new_all,
+      'featured_from_category_all' => Category.features(1)
+      }
   end
 
   def article_params
