@@ -13,10 +13,6 @@ class Article < ApplicationRecord
   scope :feature, -> { ordered_by_priority.first }
   ######
 
-  after_save do
-    puts 'wow'
-  end
-
   def self.featured_from(number, selected)
     Category.find(selected).include(:articles).ordered_by_priority(number)
   end

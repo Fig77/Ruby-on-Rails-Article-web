@@ -1,6 +1,8 @@
-<article>
-	<h2> <%= @article.title %> </h2>
-	<p> <%= simple_format(@article.text) %> </p>
-	<span> <%= @article.author_id %> </span>
-</article>
+<% unless @article.nil? %>
+  <article>
+	  <h2> <%= @article.title %> </h2>
+	  <p> <%= simple_format(@article.text) %> </p>
+	  <span> <%= @article.author_id %> </span>
+  </article>
+<% end %>
 

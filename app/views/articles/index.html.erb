@@ -1,10 +1,15 @@
 <!-- header will be here -->
 <section> 
 	<div>
-		<!-- main article -->
+		<%= render 'article', Article: @article=@index_data['feature'] %>
 	</div>
+	<br>
+	<br>
+	<br>
 	<div>
-		<!-- article categories -->
+		<%= @index_data['new_from_categories'].each do |x| %>
+
+		<% end %>
 	</div>
 </section>
 <section>

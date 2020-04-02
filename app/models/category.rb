@@ -6,14 +6,12 @@ class Category < ApplicationRecord
     self.priority += 1
   end
 
-  scope :all_with_articles, -> { all.includes(:articles) }
-
   def self.new_all
-    articles = []
-    Category.all.includes(:articles).each do |x|
-      articles.push(x.articles.ordered_by_most_recent.first) unless x.articles.count.zero?
+    article = []
+    Category.all.each do |x|
+      article.push(x.articles.ordered_by_most_recent.first) unless x.articles.count.zero?
     end
-    articles
+    article
   end
 
   def self.features(id)

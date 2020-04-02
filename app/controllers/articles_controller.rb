@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     data = { 
       'feature' => Article.feature,
       'new_from_categories' => Category.new_all,
-      'featured_from_category_all' => Category.features(1)
+      #'featured_from_category_all' => Category.features(1)
       }
   end
 
