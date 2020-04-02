@@ -10,6 +10,11 @@
   </head>
 
   <body>
+
+    <header>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete) if signed_in? %>
+    </header>
+
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>

@@ -4,12 +4,16 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    if signed_in?
+      @article = current_user.articles.new
+    else
+      redirect_to index_path
+    end
   end
 
   def create
     @article = current_user.articles.new(article_params)
-    render :new unless @article.save
+    @article.save ? (redirect_to index_path) : (render :new)
   end
 
   def show; end
