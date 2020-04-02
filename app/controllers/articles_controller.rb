@@ -22,5 +22,10 @@ class ArticlesController < ApplicationController
       # 'recent_all' => Category.recent_all
       # 'selected_feature' => featured_from(3, @selected)
     }
+    @articles_all = Article.feature
+  end
+
+  def article_params
+    params.require(:article).permit(:title, :text)
   end
 end
