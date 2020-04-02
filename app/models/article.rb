@@ -8,9 +8,14 @@ class Article < ApplicationRecord
 
   # Scopes
 
+  def countPriority
+    self.priority += 1
+    self.save
+  end
+
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
-  scope :ordered_by_priority, -> { order(votes: :asc) }
-  scope :feature, -> { ordered_by_priority.first }
+  scope :ordered_by_priority, -> { order(priority: :asc) }
+  scope :feature, -> { order(priority: :asc).first }
   ######
 
   def self.featured_from(number, selected)
