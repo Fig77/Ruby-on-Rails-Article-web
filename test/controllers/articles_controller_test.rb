@@ -18,5 +18,4 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   ## Testing action executing properly
-
 end

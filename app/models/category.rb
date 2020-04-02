@@ -4,15 +4,13 @@ class Category < ApplicationRecord
 
   before_create do # priority of category will be in relation to articles created.
     self.priority += 1
-  end # <<<- wrong here
-
-  # scopes
+  end
 
   scope :all_with_articles, -> { all.includes(:articles) }
   def self.recent_all
     recor ||= ActiveRecord::Relation.Collection
     all_with_articles.each do |x|
-       x.articles do |y|
+      x.articles do |y|
         recor << y.ordered_by_most_recent.first
       end
     end

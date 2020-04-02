@@ -21,7 +21,6 @@ class Article < ApplicationRecord
     Category.find(selected).include(:articles).ordered_by_priority(number)
   end
 
-
   # Validations
 
   validates :text, length: { minimum: 70 }, presence: true
