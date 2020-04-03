@@ -4,6 +4,7 @@ class ArticleTest < ActiveSupport::TestCase
   setup do
     @false_article = Article.new('author_id' => 1, 'title' => 'asdsd', 'text' => 'a' * 78)
     @article = articles(:article_1)
+    @most_recent = [articles(:article_1), articles(:article_2)]
   end
 
   test 'validations should be in place' do
@@ -26,6 +27,12 @@ class ArticleTest < ActiveSupport::TestCase
   test 'Article can have many votes' do
     assert_equal(2, @article.votes.count, 'Does not have a collection')
   end
+
+  test 'Will get every new article from category' do
+    articles_id = Article.new_all
+    assert(articles_id == @most_recent)
+  end
+
 
   ## Actions
 

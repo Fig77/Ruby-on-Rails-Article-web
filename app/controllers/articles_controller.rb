@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   def articles_index
     data = { 
       'feature' => Article.feature,
-      'new_from_categories' => Category.new_all,
+      'new_from_categories' => Article.new_all
       #'featured_from_category_all' => Category.features(1)
       }
   end

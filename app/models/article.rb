@@ -5,6 +5,9 @@ class Article < ApplicationRecord
   has_many :article_categories
   has_many :categories, through: :article_categories
   has_many :votes
+  scope :new_all, -> { self.ordered_by_most_recent.find(ArticleCategory.pluck(:article_id).uniq) }
+
+
 
   # Scopes
 
@@ -16,6 +19,7 @@ class Article < ApplicationRecord
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
   scope :ordered_by_priority, -> { order(priority: :asc) }
   scope :feature, -> { order(priority: :asc).first }
+
   ######
 
   def self.featured_from(number, selected)
