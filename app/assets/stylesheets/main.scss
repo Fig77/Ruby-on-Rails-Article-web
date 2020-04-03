@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-	height: 98px;
+	height: 58px;
 	border-top-style: solid;
 	border-bottom-style: solid;
 	border-color: $gray-main;
@@ -30,12 +30,19 @@ body {
   grid-column: span 12;
 }
 
+.logo {
+	height: 58px;
+	width: 98px;
+	float: right;
+	margin-right: 50%;
+}
+
   @for $i from 1 through 12 {
      .col-#{$i}-m { grid-column: span $i; }
   }
 
  ul {
- 	margin-top: 37px;
+ 	margin-top: 17px;
  	list-style-type: none;
  	li {
 
