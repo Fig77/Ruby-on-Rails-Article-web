@@ -1,2 +1,21 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<!-- header will be here -->
+<section> 
+	<div>
+		<%= render 'article', Article: @article=@index_data['feature'] %>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div>
+		<% @index_data['new_from_categories'].each do |x| %>
+		 <br>
+		 <%= x.inspect %>
+		  <br>
+		<% end %>
+		<h1> ENDING OF ALL </h1>
+	</div>
+</section>
+<section>
+	<!-- article from categories in featured order -->
+</section>
+<!-- footer will be here -->

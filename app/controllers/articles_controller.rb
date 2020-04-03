@@ -1,26 +1,36 @@
 class ArticlesController < ApplicationController
   def index
-    articles_index
+    @index_data = articles_index
   end
 
   def new
-    @article = Article.new
+    if signed_in?
+      @article = current_user.articles.new
+    else
+      redirect_to index_path
+    end
   end
 
   def create
     @article = current_user.articles.new(article_params)
-    render :new unless @article.save
+    @article.save ? (redirect_to index_path) : (render :new)
   end
 
-  def show; end
+  def show
+    @article = Article.find(params[:id])
+  end
 
   private
 
   def articles_index
-    { # Refactor later into one query
-      'feature' => Article.feature
-      # 'recent_all' => Category.recent_all
-      # 'selected_feature' => featured_from(3, @selected)
+    {
+      'feature' => Article.feature,
+      'new_from_categories' => Article.new_all
+      # 'featured_from_category_all' => Category.features(1)
     }
+  end
+
+  def article_params
+    params.require(:article).permit(:title, :text)
   end
 end

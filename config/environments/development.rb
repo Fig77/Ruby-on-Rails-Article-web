@@ -62,3 +62,26 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+=begin
+# Pop users 
+5.times do |x|
+  User.new('username' => "foo#{x}", 'email' => "foo@bar.com#{x}", 
+          'password' => 'foobar').save
+end
+5.times do |x|
+  Category.new('name' => "review#{x}").save
+end
+User.all.each do |x|
+  x.articles.new('title' => 't'*5, 'text'=>'t'*80).save
+end
+Article.all.each do |x|
+  x.article_categories.new('category_id'=>x.id).save
+end
+Article.all.each do |x|
+  (x['priority']=0)
+  x.save
+end
+5.times do |x|
+  Vote.new('article_id' => 1, 'user_id' => x).save
+end
+=end
