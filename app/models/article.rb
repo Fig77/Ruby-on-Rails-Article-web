@@ -9,7 +9,7 @@ class Article < ApplicationRecord
 
   # Scopes
 
-  def countPriority
+  def count_priority
     self.priority += 1
     save
   end
