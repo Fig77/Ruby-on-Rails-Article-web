@@ -3,6 +3,6 @@ class Vote < ApplicationRecord
   belongs_to :article
 
   after_create do
-  	self.article.countPriority
+    article.countPriority
   end
 end

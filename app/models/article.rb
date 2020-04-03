@@ -5,15 +5,13 @@ class Article < ApplicationRecord
   has_many :article_categories
   has_many :categories, through: :article_categories
   has_many :votes
-  scope :new_all, -> { self.ordered_by_most_recent.find(ArticleCategory.pluck(:article_id).uniq) }
-
-
+  scope :new_all, -> { ordered_by_most_recent.find(ArticleCategory.pluck(:article_id).uniq) }
 
   # Scopes
 
   def countPriority
     self.priority += 1
-    self.save
+    save
   end
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }

@@ -33,7 +33,6 @@ class ArticleTest < ActiveSupport::TestCase
     assert(articles_id == @most_recent)
   end
 
-
   ## Actions
 
   test 'Only logged user can creat a new article' do
