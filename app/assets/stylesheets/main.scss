@@ -24,6 +24,12 @@ body {
 	flex-direction: columns;
 }
 
+.d-flex-center {
+	align-items: center;
+ 	justify-content: center;
+
+}
+
 .grid-template-default {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -52,10 +58,4 @@ body {
  	li {
 
  	}
- }
-
- .container_user_forms {
- 	align-items: center;
- 	justify-content: center;
-
  }
