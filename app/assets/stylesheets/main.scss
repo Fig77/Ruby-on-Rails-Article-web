@@ -1,0 +1,43 @@
+$black-main: #212121;
+$white-main: #CFD8DC;
+$gray-main: #757575;
+
+body {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	height: 98px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: $gray-main;
+}
+
+.d-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-template-default {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1%;
+}
+
+.row {
+  grid-column: span 12;
+}
+
+  @for $i from 1 through 12 {
+     .col-#{$i}-m { grid-column: span $i; }
+  }
+
+ ul {
+ 	margin-top: 37px;
+ 	list-style-type: none;
+ 	li {
+
+ 	}
+ }
