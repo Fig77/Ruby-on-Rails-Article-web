@@ -1,7 +1,8 @@
 <!-- header will be here -->
 <section> 
+	<h1 class="text-danger">Articles</h1>
 	<div>
-		<%= render 'article', Article: @article=@index_data['feature'] %>
+		<%= render 'article', Article: @article=@index_data['feature'].first %>
 	</div>
 	<br>
 	<br>

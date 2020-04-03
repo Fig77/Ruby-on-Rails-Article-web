@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @index_data = articles_index
+   @index_data = articles_index
   end
 
   def new
@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
   private
 
   def articles_index
-    {
+    test = {
       'feature' => Article.feature,
       'new_from_categories' => Article.new_all
       # 'featured_from_category_all' => Category.features(1)

@@ -4,15 +4,29 @@
     <title>RoRCapstonProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap'  %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
 
-    <header>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete) if signed_in? %>
+    <header class=' header'>
+      <nav class='grid-template-default row'>
+        <div class='col-4-m'>
+        <%= image_tag("bisde-02.png")%>
+        </div>
+        <ul class='grid-template-default col-8-m col-start-end'>
+          <li class='col-2-m'>
+             <%= link_to('Logout', destroy_user_session_path, method: :delete) if signed_in? %></li>
+          <li class='col-2-m d-flex'>Test</li>
+          <li class='col-2-m d-flex'>Test</li>
+          <li class='col-2-m d-flex'>Test</li>
+          <li class='col-2-m d-flex'>Test</li>
+        </ul>
+      </nav>
+   
     </header>
 
     <% if notice %>
@@ -24,3 +38,4 @@
     <%= yield %>
     </body>
 </html>
+
