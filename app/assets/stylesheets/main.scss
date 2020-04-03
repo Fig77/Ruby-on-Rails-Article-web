@@ -20,6 +20,10 @@ body {
 	justify-content: center;
 }
 
+.d-flex-col {
+	flex-direction: columns;
+}
+
 .grid-template-default {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -39,6 +43,7 @@ body {
 
   @for $i from 1 through 12 {
      .col-#{$i}-m { grid-column: span $i; }
+     .col-start-#{$i}-m { grid-column-start: span $i; }
   }
 
  ul {
@@ -47,4 +52,10 @@ body {
  	li {
 
  	}
+ }
+
+ .container_user_forms {
+ 	align-items: center;
+ 	justify-content: center;
+
  }

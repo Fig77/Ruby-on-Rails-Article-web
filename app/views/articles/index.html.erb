@@ -1,22 +1,22 @@
 <!-- header will be here -->
 <section> 
-	<h1 class="text-danger">Articles</h1>
-	<div>
-		<%= render 'article', Article: @article=@index_data['feature'].first %>
-	</div>
-	<br>
-	<br>
-	<br>
-	<div>
-		<% @index_data['new_from_categories'].each do |x| %>
-		 <br>
-		 <%= x.inspect %>
-		  <br>
-		<% end %>
-		<h1> ENDING OF ALL </h1>
+	<div class='grid-template-default'>
+		<div class='row previewDisplay d-flex d-flex-col'>
+		  <% unless @index_data['feature'].first.nil? %>
+			<h1 class='title-main'>
+				<%= @index_data['feature'].first.title %>		
+			</h1>
+			<h3 class='author'>@index_data['feature'].first.author.username</h3>
+			<p class='preview'><%= @index_data['feature'].first.title.truncate.length(45) %></p>
+	      <% end %>
+		</div>
 	</div>
 </section>
-<section>
-	<!-- article from categories in featured order -->
+<section class= 'd-flex'>
+	<% @index_data['new_from_categories'].each do |c| %>
+		<div>
+			<h3> c.title </h3>
+		</div>
+	<% end %>
 </section>
-<!-- footer will be here -->
+

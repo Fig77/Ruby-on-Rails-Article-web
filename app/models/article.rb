@@ -16,7 +16,7 @@ class Article < ApplicationRecord
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
   scope :ordered_by_priority, -> { order(priority: :asc) }
-  scope :feature, -> { order(priority: :asc).first }
+  scope :feature, -> { order(priority: :asc).includes(:author).first }
 
   ######
 
