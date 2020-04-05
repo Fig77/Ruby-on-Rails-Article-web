@@ -1,6 +1,10 @@
 $black-main: #212121;
 $white-main: #CFD8DC;
 $gray-main: #757575;
+$lg: 'lg';
+$md: 'md';
+$sm: 'sm';
+$bl: '';
 
 body {
 	font-size: 18px;
@@ -14,30 +18,54 @@ body {
 	border-color: $gray-main;
 }
 
-.d-flex {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.d-flex-col {
-	flex-direction: columns;
-}
-
-.d-flex-center {
-	align-items: center;
- 	justify-content: center;
-
-}
-
-.grid-template-default {
+.default-grid-template {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1%;
 }
 
 .row {
-  grid-column: span 12;
+  grid-column: span  12;
+}
+
+@for $i from 1 through 12 {
+  .col-lg-#{$i} { grid-column: span $i; }
+  .g-col-gap-#{$i} { grid-column-gap: $i*1%; }
+  .g-row-start-#{$i} { grid-row-start: $i; }
+  .g-row-end-#{$i}{ grid-row-end: $i; }
+  .g-col-start-#{$i} { grid-column-start: $i; }
+  .g-col-end-#{$i} { grid-column-end: $i; }
+}
+
+.place-g-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-c-center {
+  justify-content: center;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.d-flex-col {
+	flex-direction: columns;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .logo {
@@ -46,11 +74,6 @@ body {
 	float: right;
 	margin-right: 50%;
 }
-
-  @for $i from 1 through 12 {
-     .col-#{$i}-m { grid-column: span $i; }
-     .col-start-#{$i}-m { grid-column-start: span $i; }
-  }
 
  ul {
  	margin-top: 17px;

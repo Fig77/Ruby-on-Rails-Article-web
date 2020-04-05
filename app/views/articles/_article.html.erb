@@ -1,7 +1,9 @@
 <% unless @article.nil? %>
   <article>
-	  <h2> <%= @article.title %> </h2>
-	  <p> <%= simple_format(@article.text) %> </p>
+	  <div class= 'field-article'> <%= @article.title %> </div>
+	  <div class= 'field-article field-box'>
+	  <p> <%= simple_format(@article.text)%> </p>
+	  </div>
 	  <span> <%= @article.author_id %> </span>
 	  <span> <%= @article.priority %> </span>
   </article>
