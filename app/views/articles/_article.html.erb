@@ -2,6 +2,9 @@
   <article class = 'default-grid-template'>
   	<div class = 'g-col-start-4 g-col-end-10'>
 	  <div class= 'field-article'> <%= @article.title %> </div>
+	  <div >
+	   <%= image_tag @article.image.url, class: 'article-title-pic'%>
+	  </div>
 	  <div class= 'field-article field-box'>
 	  <p> <%= simple_format(@article.text)%> </p>
 	  </div>

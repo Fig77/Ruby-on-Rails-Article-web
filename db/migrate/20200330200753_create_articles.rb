@@ -4,8 +4,6 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.integer :author_id, references: :users, foreign_key: { to_table: :users }
       t.string :title
       t.string :text
-      t.string :image
-      
 
       t.timestamps
     end

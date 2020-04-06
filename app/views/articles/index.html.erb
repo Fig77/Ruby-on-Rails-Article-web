@@ -2,7 +2,7 @@
 <section> 
 	<div class='default-grid-template'>
 		<% unless @index_data['feature'].nil? %>
-		  <div class = 'd-flex d-flex-col g-col-start-4 g-col-end-10'>
+		  <%= image_tag @index_data['feature'].image.url %>
 		  <h1 class='title-main'>
 			<%= @index_data['feature'].title %>
 		  </h1>
