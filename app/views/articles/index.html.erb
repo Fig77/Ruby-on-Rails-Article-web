@@ -1,15 +1,19 @@
 <!-- header will be here -->
 <section> 
-	<div class='default-grid-template'>
+	<div class='default-grid-template m-top-1'>
 		<% unless @index_data['feature'].nil? %>
-		  <%= image_tag @index_data['feature'].image.url %>
-		  <h1 class='title-main'>
-			<%= @index_data['feature'].title %>
-		  </h1>
-		  <div class='d-flex-break'></div>
-		  <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
-		  <div class='d-flex-break'></div>
-		  <p class='preview'><%= @index_data['feature'].text.truncate(95) %></p>
+		<div class = 'featured-article g-col-start-2 g-col-end-12'
+		  style = "background:url(<%= @index_data['feature'].image.url%>) no-repeat; background-size: 100% 100%; ">
+	
+		  <div class='m-left-1 d-flex d-flex-col preview-text'>
+		    <h1>
+		      <%= @index_data['feature'].title%>
+		    </h1>
+		    <div class='d-flex-break'></div>
+		    <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
+		    <div class='d-flex-break'></div>
+		    <p class='preview'><%= @index_data['feature'].text.truncate(95) %></p>
+		    </div>
 		  </div>
 	    <% end %>
 	</div>

@@ -91,7 +91,39 @@ body {
 
  	}
  }
+ .hover-color-w { 
+    background-color: white;
+  }
 
  .article-title-pic {
   width: 100%;
+  height: auto;
  }
+
+.featured-article {
+  height: 60vh;
+  position: relative;
+}
+
+.preview-text {
+  position: absolute;
+  bottom: 0;
+  h1 {
+    background-color: white;
+
+  }
+  p {
+    background-color: white;
+  }
+  h3 {
+    background-color: white;
+  }
+}
+
+.m-top-1 {
+  margin-top: 1%;
+}
+
+.m-left-1 {
+  margin-left: 1%;
+}

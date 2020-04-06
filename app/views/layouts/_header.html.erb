@@ -11,10 +11,13 @@
         <%= link_to('Log in!', user_session_path, method: :get) %>
         <% end %>
       </li>
-        <li class='col-lg-2 d-flex'>Articles</li>
+        <li class='col-lg-2 d-flex'>Home</li>
         <li class='col-lg-2 d-flex'>Reviews</li>
         <li class='col-lg-2 d-flex'>Upcoming</li>
         <li class='col-lg-2 d-flex'>Analysis</li>
+        <li class='col-lg-2 d-flex'>
+        <%= link_to('New', articles_new_path, method: :get) %>
+      </li> 
     </ul>
   </nav>
 </header>
