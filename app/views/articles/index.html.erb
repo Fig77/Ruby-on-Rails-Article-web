@@ -1,15 +1,17 @@
 <!-- header will be here -->
 <section> 
 	<div class='default-grid-template'>
-		<div class='row previewDisplay d-flex d-flex-col'>
-		  <% unless @index_data['feature'].first.nil? %>
-			<h1 class='title-main'>
-				<%= @index_data['feature'].first.title %>		
-			</h1>
-			<h3 class='author'>@index_data['feature'].first.author.username</h3>
-			<p class='preview'><%= @index_data['feature'].first.title.truncate.length(45) %></p>
-	      <% end %>
-		</div>
+		<% unless @index_data['feature'].nil? %>
+		  <div class = 'd-flex d-flex-col g-col-start-4 g-col-end-10'>
+		  <h1 class='title-main'>
+			<%= @index_data['feature'].title %>
+		  </h1>
+		  <div class='d-flex-break'></div>
+		  <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
+		  <div class='d-flex-break'></div>
+		  <p class='preview'><%= @index_data['feature'].text.truncate(95) %></p>
+		  </div>
+	    <% end %>
 	</div>
 </section>
 <section class= 'd-flex'>
@@ -19,4 +21,3 @@
 		</div>
 	<% end %>
 </section>
-
