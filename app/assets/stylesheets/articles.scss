@@ -32,3 +32,19 @@
 	padding-top: 0.3em;
 	padding-bottom: 0.3em;
 }
+
+.check-box input {
+	height: 20px;
+	width: 20px;
+	border-style: solid;
+	border-radius: 0.2em;
+	border-width: thin;
+	border-color: #212121;
+	margin-right: 0.3em;
+	margin-left: 0.3em;
+	cursor: pointer;
+}
+
+.check-box input:checked {
+   background: #212121;
+}

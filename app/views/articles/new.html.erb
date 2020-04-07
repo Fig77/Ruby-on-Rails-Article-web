@@ -1,4 +1,4 @@
-<% tags = ['test', 'test'] %>
+<% @selected = [] %>
 <div class='default-grid-template'>
   <div class='g-col-start-4 g-col-end-10'>
     <%= form_for @article do |article| %>
@@ -12,9 +12,13 @@
         <%= article.text_area :text, autofocus: false, placeholder: 'A slightly good idea... ', class:'field-article field-box'%>
       </div>
       <div class='d-flex field-tags'>
-        <% tags.each do |x| %>
-          <%= x %>
-        <% end %>
+      <%= collection_check_boxes :post, @selected,
+      Category.all, 'id', 'name' do |x| %>
+        <span class='check-box span-check'>
+          <%= x.check_box%>
+        </span>
+        <%= x.label %>
+      <% end %>
       </div>
       <div>
         <%= article.submit class: 'field-article field-create'%>
@@ -22,5 +26,3 @@
   <% end %>
  </div> 
 </div>
-
-

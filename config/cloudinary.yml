@@ -13,7 +13,7 @@ production:
   static_file_support: true
 test:
   cloud_name: dkcwcmiim
-  api_key: '978111884244167'
+  api_key: '978111884244167'  
   api_secret: K90ImKqBAe35lnWg2QBwuhZsaEc
   enhance_image_tag: true
   static_file_support: false
