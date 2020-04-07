@@ -11,6 +11,7 @@
 	margin-bottom: 1em;
 	margin-top: 1em;
 	width: 57vw;
+	word-wrap: break-word;
 }
 
 .field-title {
@@ -19,8 +20,8 @@
 
 .field-box {
   border-style: none;
-  resize: none;
-  height: 50vh;}
+  height: 50vh;
+}
 
 .field-create {
 	background-color: #fafafa;

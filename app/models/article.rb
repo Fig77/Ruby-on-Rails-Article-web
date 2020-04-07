@@ -6,11 +6,7 @@ class Article < ApplicationRecord
   has_many :categories, through: :article_categories
   has_many :votes
   scope :new_all, -> { ordered_by_most_recent.find(ArticleCategory.pluck(:article_id).uniq) }
-  has_attached_file :image,
-  :storage => :cloudinary,
-  :path => ':id/:style/:filename'
-  # Scopes
-
+  has_one_attached :image
   def count_priority
     self.priority += 1
     save

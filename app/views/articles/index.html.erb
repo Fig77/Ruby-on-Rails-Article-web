@@ -5,7 +5,7 @@
 	<div class='default-grid-template m-top-1'>
 		
 		<div class = 'featured-article g-col-start-2 g-col-end-12'
-		  style = "background:url(<%= @index_data['feature'].image.url %>) no-repeat; background-size: 100% 100%;">
+		  style = "background:url(<%= url_for(@index_data['feature'].image) %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center; ">
 		  <div class='m-left-1 d-flex d-flex-col preview-text'>
 			<%= link_to article_path(@index_data['feature'].id) do %>
   				<h1><%= @index_data['feature'].title %></h1>
