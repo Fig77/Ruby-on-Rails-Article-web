@@ -9,6 +9,10 @@ $bl: '';
 body {
 	font-size: 18px;
 	font-family: 'Roboto', sans-serif;
+  a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  }  
 }
 
 .header {
@@ -110,6 +114,9 @@ body {
   bottom: 0;
   h1 {
     background-color: white;
+    &:hover{
+      text-decoration: underline;
+    }
 
   }
   p {
@@ -118,6 +125,17 @@ body {
   h3 {
     background-color: white;
   }
+}
+
+.default-link {
+  margin: 0;
+  &:hover{
+      text-decoration: underline;
+      border-left: solid;
+      border-right: solid;    
+      border-width: thin;  
+          
+    }
 }
 
 .m-top-1 {
