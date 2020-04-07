@@ -1,38 +1,36 @@
 
-
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class='default-grid-template'>
+  <div class='g-col-start-6 g-col-end-10'>
 
-<div class='d-flex d-flex-col'>
-  <div class='container_user_forms d-flex-center'>
-    <h2 class='d-flex d-flex-center'>Welcome ! </h2>
-    <div class="field">
-      <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
-    </div>
-    <br>
+    <div class='d-flex d-flex-col'>
+      <div class='container_user_forms d-flex-center'>
+        <h2 class='d-flex d-flex-center justify-c-center'>Welcome </h2>
+        <div class="field">
+          <%= f.text_field :username, autofocus: true, autocomplete: "username", class:'field-login field-title', placeholder: 'username'%>
+        </div>
+        <br>
   
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
-    <br>
-
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "current-password", class:'field-login field-title',placeholder: 'passwrold' %>
+        </div>
+        <br>
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+        <br>
+        <br>
+        <div class="actions">
+          <%= f.submit "Log in", class: 'field-article field-create'%>
+        </div>
+        <%= render "devise/shared/links" %>
       </div>
-    <% end %>
-    <br>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
     </div>
-    <%= render "devise/shared/links" %>
   </div>
 </div>
-
 <% end %>
 
 
