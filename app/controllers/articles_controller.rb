@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
   private
 
   def articles_index
+    return nil if Article.count.zero?
     {
       'feature' => Article.feature,
       'new_from_categories' => Article.new_all
@@ -31,6 +32,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :image)
+    params.require(:article).permit(:title, :text)
   end
 end

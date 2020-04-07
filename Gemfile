@@ -23,6 +23,8 @@ gem 'devise'
 gem 'bootstrap-sass', '3.3.7'
 gem "font-awesome-rails"
 gem 'paperclip'
+gem 'cloudinary'
+gem 'paperclip-cloudinary'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -6,7 +6,7 @@
         <%= article.text_field :title, autofocus: false, class:'field-article field-title', placeholder: 'Title', :maxlength => '55'%>
       </div>
       <div>
-        <%= article.file_field :image%>
+        <%= article.file_field :image, direct_upload: true%>
       </div>
       <div class="field">
         <%= article.text_area :text, autofocus: false, placeholder: 'A slightly good idea... ', class:'field-article field-box'%>
@@ -22,3 +22,5 @@
   <% end %>
  </div> 
 </div>
+
+
