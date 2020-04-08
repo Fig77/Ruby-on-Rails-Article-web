@@ -1,21 +1,37 @@
 <!-- header will be here -->
+<% unless @index_data.nil? %>
 <section> 
-	<div>
-		<%= render 'article', Article: @article=@index_data['feature'] %>
-	</div>
-	<br>
-	<br>
-	<br>
-	<div>
-		<% @index_data['new_from_categories'].each do |x| %>
-		 <br>
-		 <%= x.inspect %>
-		  <br>
-		<% end %>
-		<h1> ENDING OF ALL </h1>
+
+	<div class='default-grid-template m-top-1'>
+		
+		<div class = 'featured-article g-col-start-2 g-col-end-12'
+		  style = "background:url(<%= url_for(@index_data['feature'].image) %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center; ">
+		  <div class='m-left-1 d-flex d-flex-col preview-text'>
+			<%= link_to article_path(@index_data['feature'].id) do %>
+  				<h1><%= @index_data['feature'].title %></h1>
+			<% end %>
+		    <div class='d-flex-break'></div>
+		    <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
+		    <div class='d-flex-break'></div>
+		    <p class='preview'><%= @index_data['feature'].text.truncate(95) %></p>
+		    </div>
+		  </div>
+	
 	</div>
 </section>
-<section>
-	<!-- article from categories in featured order -->
-</section>
-<!-- footer will be here -->
+<div class='default-grid-template m-top-1'>
+  <section class= 'default-grid-template g-col-start-2 g-col-end-12 '>
+	<% @index_data['new_from_categories'].each do |c| %>
+		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.image) %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center;">
+			<div class='m-left-1 d-flex d-flex-col preview-text '>
+			  <h3 > <%= c.title %></h3>
+			  <div class='d-flex-break'></div>
+			  <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
+			</div>
+		</div>
+	<% end %>
+  </section>
+</div>
+<% end %>
+
+

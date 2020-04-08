@@ -4,17 +4,13 @@
     <title>RoRCapstonProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap'  %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-    <header>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete) if signed_in? %>
-    </header>
-
+    <%= render 'layouts/header' %>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
@@ -24,3 +20,4 @@
     <%= yield %>
     </body>
 </html>
+

@@ -1,0 +1,23 @@
+<header class='header'>
+  <nav class='default-grid-template'>
+    <div class='col-lg-4'>
+      <%= image_tag("bisde-03.png", class: 'logo')%>
+    </div>
+    <ul class='default-grid-template col-lg-8'>
+      <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>
+        <% unless current_user.nil? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <% else %>
+        <%= link_to('Log in!', user_session_path, method: :get) %>
+        <% end %>
+      </li>
+        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'><%= link_to('Home', root_path) %> </li>
+        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>Reviews</li>
+        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>Upcoming</li>
+        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>Analysis</li>
+        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>
+        <%= link_to('New', new_article_path, method: :get) %>
+      </li> 
+    </ul>
+  </nav>
+</header>

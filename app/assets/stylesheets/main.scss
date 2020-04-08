@@ -1,0 +1,147 @@
+$black-main: #212121;
+$white-main: #CFD8DC;
+$gray-main: #757575;
+$lg: 'lg';
+$md: 'md';
+$sm: 'sm';
+$bl: '';
+
+body {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+  a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  }  
+}
+
+.header {
+	height: 58px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: $gray-main;
+}
+
+.default-grid-template {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1%;
+}
+
+.row {
+  grid-column: span  12;
+}
+
+@for $i from 1 through 12 {
+  .col-lg-#{$i} { grid-column: span $i; }
+  .g-col-gap-#{$i} { grid-column-gap: $i*1%; }
+  .g-row-start-#{$i} { grid-row-start: $i; }
+  .g-row-end-#{$i}{ grid-row-end: $i; }
+  .g-col-start-#{$i} { grid-column-start: $i; }
+  .g-col-end-#{$i} { grid-column-end: $i; }
+}
+
+.place-g-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-c-center {
+  justify-content: center;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.d-flex-col {
+	flex-direction: columns;
+}
+
+.d-flex-wrap {
+	flex-wrap: wrap;
+}
+
+.d-flex-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.logo {
+	height: 58px;
+	width: 98px;
+	float: right;
+	margin-right: 50%;
+}
+
+ ul {
+ 	margin-top: 17px;
+ 	list-style-type: none;
+ 	li {
+
+ 	}
+ }
+ .hover-color-w { 
+    background-color: white;
+  }
+
+ .article-title-pic {
+  width: 100%;
+  height: auto;
+ }
+
+.featured-article {
+  height: 60vh;
+  position: relative;
+}
+
+.preview-text {
+  position: absolute;
+  bottom: 0;
+  h1 {
+    background-color: white;
+    &:hover{
+      text-decoration: underline;
+    }
+
+  }
+  p {
+    background-color: white;
+  }
+  h3 {
+    background-color: white;
+  }
+}
+
+.default-link {
+  margin: 0;
+  &:hover{
+      text-decoration: underline;
+      border-left: solid;
+      border-right: solid;    
+      border-width: thin;  
+          
+    }
+}
+
+.m-top-1 {
+  margin-top: 1%;
+}
+
+.m-left-1 {
+  margin-left: 1%;
+}

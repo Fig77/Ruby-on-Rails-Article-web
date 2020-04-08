@@ -13,7 +13,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
-    @article.save ? (redirect_to index_path) : (render :new)
+    if @article.save
+      redirect_to index_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -23,6 +27,8 @@ class ArticlesController < ApplicationController
   private
 
   def articles_index
+    return nil if Article.count.zero?
+
     {
       'feature' => Article.feature,
       'new_from_categories' => Article.new_all
@@ -30,7 +36,9 @@ class ArticlesController < ApplicationController
     }
   end
 
+  def add_categories; end
+
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end
