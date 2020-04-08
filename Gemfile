@@ -19,11 +19,11 @@ gem 'jbuilder'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt'
-gem 'devise'
 gem 'bootstrap-sass', '3.3.7'
-gem "font-awesome-rails"
-gem 'paperclip'
 gem 'cloudinary'
+gem 'devise'
+gem 'font-awesome-rails'
+gem 'paperclip'
 gem 'paperclip-cloudinary'
 
 # Use Active Storage variant

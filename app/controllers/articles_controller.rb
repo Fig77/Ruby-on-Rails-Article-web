@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-   @index_data = articles_index
+    @index_data = articles_index
   end
 
   def new
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
-    if @article.save 
+    if @article.save
       redirect_to index_path
     else
       render :new
@@ -28,16 +28,15 @@ class ArticlesController < ApplicationController
 
   def articles_index
     return nil if Article.count.zero?
+
     {
       'feature' => Article.feature,
       'new_from_categories' => Article.new_all
-      #'featured_from_category_all' => Category.features(1)
+      # 'featured_from_category_all' => Category.features(1)
     }
   end
 
-  def add_categories 
-
-  end
+  def add_categories; end
 
   def article_params
     params.require(:article).permit(:title, :text, :image, category_ids: [])
