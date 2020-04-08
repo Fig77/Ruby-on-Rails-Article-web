@@ -40,11 +40,17 @@
 	border-radius: 0.2em;
 	border-width: thin;
 	border-color: #212121;
-	margin-right: 0.3em;
-	margin-left: 0.3em;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
 	cursor: pointer;
 }
 
-.check-box input:checked {
-   background: #212121;
+.newest-index {
+    height: 25vh;
+    position: relative;
 }
+
+.top-0 {
+	top: 0;
+}
+

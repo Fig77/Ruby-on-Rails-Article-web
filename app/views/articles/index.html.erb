@@ -19,13 +19,19 @@
 	
 	</div>
 </section>
-<section class= 'd-flex'>
+<div class='default-grid-template m-top-1'>
+  <section class= 'default-grid-template g-col-start-2 g-col-end-12 '>
 	<% @index_data['new_from_categories'].each do |c| %>
-		<div>
-			<h3> c.title </h3>
+		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.image) %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center;">
+			<div class='m-left-1 d-flex d-flex-col preview-text '>
+			  <h3 > <%= c.title %></h3>
+			  <div class='d-flex-break'></div>
+			  <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
+			</div>
 		</div>
 	<% end %>
-</section>
+  </section>
+</div>
 <% end %>
 
 
