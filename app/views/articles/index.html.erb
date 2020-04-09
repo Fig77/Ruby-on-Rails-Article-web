@@ -23,8 +23,12 @@
   <section class= 'default-grid-template g-col-start-2 g-col-end-12 '>
 	<% @index_data['new_from_categories'].each do |c| %>
 		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.article.image) %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center;">
+
 			<div class='m-left-1 d-flex d-flex-col preview-text '>
-			  <h3 > <%= c.article.title %></h3>
+				<h1><%= c.category.name %></h1>
+			<%= link_to article_path(c.article.id) do %>
+			     <h3> <%= c.article.title %></h3> 
+			<% end %>
 			  <div class='d-flex-break'></div>
 			  <h3 class='author'> Written by <%= c.article.author.username %> </h3>
 			</div>
