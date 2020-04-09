@@ -9,8 +9,7 @@ class Article < ApplicationRecord
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
   scope :ordered_by_priority, -> { order(priority: :asc) }
-  scope :feature, -> { order(priority: :asc).includes(:author) }
-
+  scope :feature, -> { order(priority: :asc).includes(:author).with_attached_image }
 
   def self.featured_from(number, selected)
     Category.find(selected).include(:articles).ordered_by_priority(number)

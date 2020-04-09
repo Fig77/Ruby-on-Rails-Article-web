@@ -14,7 +14,7 @@ class ArticleCategory < ApplicationRecord
      |x| 
       hashArray.push(x['article_id'])
     }
-    where(id: hashArray).includes({article: :image_attachment},:category)
+    where(id: hashArray).includes({article: [:image_attachment, :author]}, :category)
   end
 
  
