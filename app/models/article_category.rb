@@ -8,7 +8,7 @@ class ArticleCategory < ApplicationRecord
   else
     order_group = "SELECT DISTINCT ON (category_id) *
                    FROM article_categories
-                   ORDER BY created_at"
+                   ORDER BY category_id, created_at DESC"
   end
   scope :new_all, -> {
   	self.connection.execute(order_group) 
