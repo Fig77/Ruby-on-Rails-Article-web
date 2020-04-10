@@ -2,8 +2,8 @@ class ArticleCategory < ApplicationRecord
   belongs_to :category
   belongs_to :article
   order_group = "SELECT * FROM 
-                 (SELECT * FROM article_categories ORDER BY created_at DESC)
-  				        GROUP BY category_id"      
+                (SELECT * FROM article_categories ORDER BY created_at DESC)
+  				      AS sub GROUP BY category_id"      
   scope :new_all, -> {
   	self.connection.execute(order_group) 
   }
