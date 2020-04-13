@@ -30,8 +30,8 @@ class ArticlesController < ApplicationController
     return nil if Article.count.zero?
 
     {
-      'feature' => Article.feature,
-      'new_from_categories' => Article.new_all
+      'feature' => Article.feature.includes(:author).with_attached_image.first,
+      'new_from_categories' => ArticleCategory.getArray
       # 'featured_from_category_all' => Category.features(1)
     }
   end
