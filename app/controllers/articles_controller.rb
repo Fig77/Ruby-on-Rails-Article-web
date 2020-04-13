@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+    include ApplicationHelper
+
   def index
     @index_data = articles_index
   end
@@ -36,7 +38,6 @@ class ArticlesController < ApplicationController
     }
   end
 
-  def add_categories; end
 
   def article_params
     params.require(:article).permit(:title, :text, :image, category_ids: [])

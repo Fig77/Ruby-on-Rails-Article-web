@@ -3,6 +3,7 @@ class CreateVotes < ActiveRecord::Migration[6.0]
     create_table :votes do |t|
       t.integer :user_id
       t.integer :article_id
+      t.boolean :positive
 
       t.timestamps
     end

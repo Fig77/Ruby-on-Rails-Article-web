@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_162154) do
   create_table "votes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "article_id"
+    t.boolean "positive"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
