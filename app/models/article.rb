@@ -17,7 +17,7 @@ class Article < ApplicationRecord
 
   def self.countPriority(n)
     self.priority += n
-    self.update
+    update
   end
 
   # Validations

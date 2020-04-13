@@ -1,4 +1,6 @@
-<% str_vote = (!gVote(@article.id).positive || gVote(@article.id).nil?) ? 'Up vote !' : 'Down vote' %>
+
+<% vote = gVote(@article.id).nil? ? nil : gVote(@article.id).positive %>
+<% str_vote = (vote.nil? || !vote) ? 'Up vote !' : 'Down vote' %>
 <% unless @article.nil? %>
   <article class = 'default-grid-template'>
   	<div class = 'g-col-start-3 g-col-end-10'>
