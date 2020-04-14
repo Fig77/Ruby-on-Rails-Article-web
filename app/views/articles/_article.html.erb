@@ -1,5 +1,5 @@
 <% unless current_user.nil? %>
-<% vote = gVote(@article.id).nil? ? nil : gVote(@article.id).positive %>
+<% vote = g_vote(@article.id).nil? ? nil : g_vote(@article.id).positive %>
 <% str_vote = (vote.nil? || !vote) ? 'Up vote !' : 'Down vote' %>
 <% end %>
 <% unless @article.nil? %>

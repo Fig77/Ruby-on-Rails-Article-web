@@ -1,9 +1,9 @@
 module ApplicationHelper
-  def getVote
+  def gt_vote
     current_user.votes.find_by(article_id: params[:article])
   end
 
-  def gVote(id)
-    current_user.votes.find_by(article_id: id)
+  def g_vote(idd)
+    current_user.votes.find_by(article_id: idd)
   end
 end
