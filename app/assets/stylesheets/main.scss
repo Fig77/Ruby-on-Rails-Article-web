@@ -142,10 +142,36 @@ body {
     }
 }
 
+.border-bot-1 {
+  border-bottom-style: solid;
+  border-width: thin;
+  border-color: $gray-main;
+}
+
+.m-1 {
+  margin: 1%;
+}
+
+.p-1 {
+  padding: 1%;
+}
+
 .m-top-1 {
   margin-top: 1%;
 }
 
 .m-left-1 {
   margin-left: 1%;
+}
+
+.d-table {
+  display: table;
+}
+
+.d-in-block {
+  display: inline-block;
+}
+
+.max-height-400 {
+  height: 200px;
 }
