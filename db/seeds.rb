@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 categories = ['Reviews', 'Analysis', 'Upcoming']
-categories.each { |x| Category.new('name'=>x).save 
+categories.each { |x| Category.new('name'=>x).save }
