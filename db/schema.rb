@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_162154) do
     t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "priority"
+    t.integer "priority", default: 0
     t.string "image_file_name"
     t.string "image_content_type"
     t.bigint "image_file_size"
