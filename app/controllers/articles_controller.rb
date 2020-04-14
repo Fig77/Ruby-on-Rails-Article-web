@@ -30,11 +30,9 @@ class ArticlesController < ApplicationController
 
   def articles_index
     return nil if Article.count.zero?
-
     {
       'feature' => Article.feature.includes(:author).with_attached_image.first,
       'new_from_categories' => ArticleCategory.getArray
-      # 'featured_from_category_all' => Category.features(1)
     }
   end
 

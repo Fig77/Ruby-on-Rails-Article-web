@@ -6,6 +6,4 @@ class VotesController < ApplicationController
     @vote.save
     redirect_to article_path
   end
-
-  def delete; end
 end
