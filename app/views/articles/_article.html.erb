@@ -1,16 +1,19 @@
+
+<% vote = gVote(@article.id).nil? ? nil : gVote(@article.id).positive %>
+<% str_vote = (vote.nil? || !vote) ? 'Up vote !' : 'Down vote' %>
 <% unless @article.nil? %>
   <article class = 'default-grid-template'>
-  	<div class = 'g-col-start-4 g-col-end-10'>
+  	<div class = 'g-col-start-3 g-col-end-10'>
 	  <div class= 'field-article'> <%= @article.title %> </div>
 	  <div >
 	   <%= image_tag @article.image, class: 'article-title-pic'%>
 	  </div>
 	  <div class='field-article field-box m-w-100'>
 	  <p> <%= simple_format(@article.text)%> </p>
+	   <div class='divisor-div'> Votes: <%= @article.priority %></div>
+	   <span> Written by: <%= @article.author.username %> </span>
+	   <%= button_to str_vote, article_path, params: { :article => @article.id }, method: :put, class: 'button-vote'%>
 	  </div>
-	  <span> <%= @article.author_id %> </span>
-	  <span> <%= @article.priority %> </span>
 	</div>
   </article>
 <% end %>
-

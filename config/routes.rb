@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :articles, only:[:new, :create, :show]
   root 'articles#index'
   get 'index', to: 'articles#index'
+  put 'articles/:id', to: 'votes#update'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
