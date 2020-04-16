@@ -5,6 +5,7 @@ $lg: 'lg';
 $md: 'md';
 $sm: 'sm';
 $bl: '';
+@import 'font-awesome';
 
 body {
 	font-size: 18px;
@@ -160,6 +161,10 @@ body {
   margin-top: 1%;
 }
 
+.m-top-1-5{
+  margin-top: 1.5%;
+}
+
 .m-left-1 {
   margin-left: 1%;
 }
@@ -174,4 +179,23 @@ body {
 
 .max-height-400 {
   height: 200px;
+}
+
+.footer-box {
+  border-top-style: solid;
+  border-width: thin;
+  border-color: $black-main;
+}
+
+.text-a-center
+{
+  vertical-align:center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.m-r-3 {
+  margin-right: 3%;
 }

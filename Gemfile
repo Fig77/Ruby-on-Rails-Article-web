@@ -29,7 +29,6 @@ gem 'paperclip'
 gem 'paperclip-cloudinary'
 gem 'rack-mini-profiler'
 gem 'stackprof'
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
