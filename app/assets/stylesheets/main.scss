@@ -5,6 +5,7 @@ $lg: 'lg';
 $md: 'md';
 $sm: 'sm';
 $bl: '';
+@import 'font-awesome';
 
 body {
 	font-size: 18px;
@@ -189,4 +190,12 @@ body {
 .text-a-center
 {
   vertical-align:center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.m-r-3 {
+  margin-right: 3%;
 }

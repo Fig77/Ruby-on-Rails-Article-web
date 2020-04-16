@@ -3,9 +3,10 @@
 		<%= image_tag("bisde-03.png", class: 'logo')%>
 	</div>
 	<div class='col-lg-6 d-flex align-i-center'>
-		<span>Privacy Policy Terns & Conditions Copyright 2021 All rights reserved.</span>
+		<span> <%= link_to('Privacy Policy Terns & Conditions', root_path, class: "bold" )%> Copyright 2021 All rights reserved.</span>
 	</div>
 	<div class = 'col-lg-3 d-flex align-i-center'>
-		<span>Connect with us: </span>
+		<span class= 'm-1 m-r-3'>Connect with us: </span>
+		<%= fa_icon 'github 2x' %>
 	</div>
 </div>
