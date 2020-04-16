@@ -1,47 +1,20 @@
 require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
-  setup do
-    @false_article = Article.new('author_id' => 1, 'title' => 'asdsd', 'text' => 'a' * 78)
-    @article = articles(:article_1)
-    @most_recent = [articles(:article_1), articles(:article_2)]
+  test 'Article has one author' do
+    assert(articles(:article_1).author.id == 1)
   end
 
-  test 'validations should be in place' do
-    temp = @false_article
-    2.times do |_x|
-      temp.title = 'a' * [rand(0..4), rand(71..100)].sample
-      assert_not(temp.valid?, 'Title should be greater than 5 and less than 70')
-    end
-    temp = @false_article
-    temp.text = rand(0..69)
-    assert_not(temp.valid?, 'Text should be bigger than 70 char')
-  end
-
-  test 'Article can have many categories' do
-    assert_equal(2, @article.categories.size, 'Does not have a collection')
-    assert_includes(@article.categories, categories(:review),
-                    'Does not include all categories from this article')
+  test 'Article has one or many categories' do
+    assert(articles(:article_1).categories.count == 2)
   end
 
   test 'Article can have many votes' do
-    assert_equal(2, @article.votes.count, 'Does not have a collection')
+    assert_equal(2, articles(:article_1).votes.count)
   end
 
-  test 'Will get every new article from category' do
-    articles_id = Article.new_all
-    assert(articles_id == @most_recent)
-  end
-
-  ## Actions
-
-  test 'Only logged user can creat a new article' do
-  end
-
-  ## Testing logic
-
-  test 'feature should get most voted article' do
-    assert_equal(@article.id, Article.feature.id, 'Does not return the most voted
-                article. ')
+  test 'feature will get the one with most votes' do
+    article = Article.feature.first
+    assert(article == articles(:article_1))
   end
 end

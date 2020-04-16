@@ -6,6 +6,7 @@
 #
 u_1:
   id: 1
+  username: 'foobar'
   email: 'foo@bar.com'
 
 u_2:

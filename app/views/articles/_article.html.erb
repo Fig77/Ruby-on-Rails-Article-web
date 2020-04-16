@@ -7,16 +7,19 @@
   	<div class = 'g-col-start-3 g-col-end-10'>
 	  <div class= 'field-article'> <%= @article.title %> </div>
 	  <div >
-	   <%= image_tag @article.image, class: 'article-title-pic'%>
+	   <% if @article.image.attached? %>
+	    <%= image_tag @article.image, class: 'article-title-pic'%>
+	   <% end %>
 	  </div>
 	  <div class='field-article field-box m-w-100'>
 	  <p> <%= simple_format(@article.text)%> </p>
-	   <div class='divisor-div'> Votes: <%= @article.priority %></div>
+	   
+	</div>
+	<div class='divisor-div'> Votes: <%= @article.priority %></div>
 	   <span> Written by: <%= @article.author.username %> </span>
 	   <% unless current_user.nil? %>
 	   <%= button_to str_vote, article_path, params: { :article => @article.id }, method: :put, class: 'button-vote'%>
 	   <% end %>
 	  </div>
-	</div>
   </article>
 <% end %>

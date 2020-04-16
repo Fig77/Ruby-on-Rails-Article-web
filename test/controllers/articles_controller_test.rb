@@ -1,21 +1,30 @@
 require 'test_helper'
+require 'devise'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  ## Testing routes
-  test 'should get index' do
-    get index_path
-    assert_response :success, 'Could not get into index'
+  include Devise::Test::IntegrationHelpers
+  setup do
+    get '/users/sign_in'
+    sign_in users(:u_1)
+    post user_session_url
   end
 
-  test 'should get create' do
-    get article_path(articles(:article_1).id)
-    assert_response :success, 'coulod not get into create'
+  test 'can get index' do
+    get '/'
+    assert_response :success
   end
 
-  test 'should get show' do
-    get article_path(articles(:article_1).id)
-    assert_response :success, 'could not get into specific article'
+  test 'can get to article/id' do
+    get '/articles/1'
+    assert_response :success
   end
 
-  ## Testing action executing properly
+  test 'can get to article/new' do
+    get '/articles/new'
+    assert_response :success
+  end
+
+  test 'this is an n+1 query' do
+    articles(:article_1).author.username
+  end
 end

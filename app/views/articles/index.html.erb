@@ -1,11 +1,10 @@
 <!-- header will be here -->
 <% unless @index_data.nil? %>
 <section> 
-
 	<div class='default-grid-template m-top-1'>
 		
 		<div class = 'featured-article g-col-start-2 g-col-end-12'
-		  style = "background:url(<%= url_for(@index_data['feature'].image) %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center; ">
+		  style = "background:url(<%= url_for(@index_data['feature'].image) if @index_data['feature'].image.attached? %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center; ">
 		  <div class='m-left-1 d-flex d-flex-col preview-text'>
 			<%= link_to article_path(@index_data['feature'].id) do %>
   				<h1><%= @index_data['feature'].title %></h1>
@@ -22,7 +21,7 @@
 <div class='default-grid-template m-top-1'>
   <section class= 'default-grid-template g-col-start-2 g-col-end-12 '>
 	<% @index_data['new_from_categories'].each do |c| %>
-		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.article.image) %>) no-repeat; background-size: 100% 100%; object-fit: cover; background-position: center;">
+		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.article.image) if c.article.image.attached? %>) no-repeat; background-size: 100% 100%; object-fit: cover; background-position: center;">
 			<div class='m-left-1 d-flex d-flex-col preview-text '>
 				<%= link_to category_path(c.category.id) do %>
   					<h1><%= c.category.name %></h1>
