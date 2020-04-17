@@ -11,11 +11,13 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+    <% flash.each do |msg| %>
+      <% if notice%>
+       <p class="alert alert-success"><%= msg %></p>
+      <% end %>
+      <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
     <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>

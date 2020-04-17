@@ -9,15 +9,16 @@ class ArticlesController < ApplicationController
     if signed_in?
       @article = current_user.articles.new
     else
-      redirect_to index_path
+      redirect_to  user_session_path
     end
   end
 
   def create
     @article = current_user.articles.new(article_params)
     if @article.save
-      redirect_to index_path
+      redirect_to articles_path(@article.id)
     else
+      flash.now[:alert] = @article.errors.full_messages.join(', ')
       render :new
     end
   end
