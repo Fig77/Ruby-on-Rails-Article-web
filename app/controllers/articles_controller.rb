@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     if signed_in?
       @article = current_user.articles.new
     else
-      redirect_to  user_session_path
+      redirect_to user_session_path
     end
   end
 
