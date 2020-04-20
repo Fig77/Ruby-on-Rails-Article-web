@@ -4,11 +4,6 @@ class Article < ApplicationRecord
   has_many :article_categories
   has_many :categories, through: :article_categories
   has_many :votes
-  scope :new_all, lambda {
-                    ordered_by_most_recent
-                      .find(ArticleCategory.pluck(:article_id).uniq && ArticleCategory
-                      .ordered_by_most_recent.pluck(:category_id).uniq)
-                  }
   has_one_attached :image
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }

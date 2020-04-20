@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
 
     {
       'feature' => Article.feature.includes(:author).with_attached_image.first,
-      'new_from_categories' => ArticleCategory.gt_array
+      'new_from_categories' => ArticleCategory.new_all
     }
   end
 
