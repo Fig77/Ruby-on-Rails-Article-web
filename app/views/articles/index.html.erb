@@ -26,7 +26,7 @@
 				<%= link_to category_path(c.category.id) do %>
   					<h2><%= c.category.name %></h2>
 				<% end %>
-			    <%= link_to articles_path(c.article.id) do %>
+			    <%= link_to article_path(c.article) do %>
 			      <h3> <%= c.article.title %></h3> 
 			    <% end %>
 			  <div class='d-flex-break'></div>

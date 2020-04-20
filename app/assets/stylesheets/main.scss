@@ -66,7 +66,7 @@ body {
 }
 
 .d-flex-col {
-	flex-direction: columns;
+	flex-direction: column;
 }
 
 .d-flex-wrap {
@@ -117,12 +117,13 @@ body {
 .preview-text {
   position: absolute;
   bottom: 0;
-  h1, h2 {
+  h1, h2, h3 {
     background-color: white;
-    margin: 0;
+
     &:hover{
       text-decoration: underline;
     }
+    width: max-content;
 
   }
   p {

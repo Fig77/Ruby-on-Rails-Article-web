@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :articles, only:[:new, :create]
+  resources :articles, only:[:new, :create, :show]
   root 'articles#index'
-  get 'article/:id', to: 'articles#show'
   get 'index', to: 'articles#index'
   put 'articles/:id', to: 'votes#update'
   get 'category/:id', to: 'categories#show', :as => :category
