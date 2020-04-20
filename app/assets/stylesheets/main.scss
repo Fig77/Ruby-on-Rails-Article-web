@@ -120,6 +120,7 @@ body {
   h1, h2, h3 {
     background-color: white;
     display: inline;
+    width: max-content;
     &:hover{
       text-decoration: underline;
     }
