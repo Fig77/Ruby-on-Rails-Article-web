@@ -6,7 +6,7 @@
 		<div class = 'featured-article g-col-start-2 g-col-end-12'
 		  style = "background:url(<%= url_for(@index_data['feature'].image) if @index_data['feature'].image.attached? %>) no-repeat; background-size: 100% auto; object-fit: cover; background-position: center; ">
 		  <div class='m-left-1 d-flex d-flex-col preview-text'>
-			<%= link_to article_path(@index_data['feature'].id) do %>
+			<%= link_to articles_path(@index_data['feature'].id) do %>
   				<h1><%= @index_data['feature'].title %></h1>
 			<% end %>
 		    <div class='d-flex-break'></div>
@@ -26,7 +26,7 @@
 				<%= link_to category_path(c.category.id) do %>
   					<h2><%= c.category.name %></h2>
 				<% end %>
-			    <%= link_to article_path(c.article.id) do %>
+			    <%= link_to articles_path(c.article.id) do %>
 			      <h3> <%= c.article.title %></h3> 
 			    <% end %>
 			  <div class='d-flex-break'></div>
