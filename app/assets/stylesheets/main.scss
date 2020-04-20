@@ -119,12 +119,10 @@ body {
   bottom: 0;
   h1, h2, h3 {
     background-color: white;
-
+    display: inline;
     &:hover{
       text-decoration: underline;
     }
-    width: max-content;
-
   }
   p {
     background-color: white;
