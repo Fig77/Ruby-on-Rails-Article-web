@@ -117,8 +117,9 @@ body {
 .preview-text {
   position: absolute;
   bottom: 0;
-  h1 {
+  h1, h2 {
     background-color: white;
+    margin: 0;
     &:hover{
       text-decoration: underline;
     }
