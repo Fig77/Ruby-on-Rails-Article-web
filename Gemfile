@@ -24,6 +24,7 @@ gem 'cloudinary'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'rack-mini-profiler'
+gem "paperclip"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
