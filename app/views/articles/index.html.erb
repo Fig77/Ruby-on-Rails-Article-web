@@ -22,7 +22,7 @@
   <section class= 'default-grid-template g-col-start-2 g-col-end-12 '>
 	<% @index_data['new_from_categories'].each do |c| %>
 		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.article.image) if c.article.image.attached? %>) no-repeat; background-size: 100% 100%; object-fit: cover; background-position: center;">
-			<div class='m-left-1 d-flex d-flex-col preview-text '>
+			<div class='m-left-1 d-flex d-flex-col preview-text d-flex-wrap'>
 				<%= link_to category_path(c.category.id) do %>
   					<h2><%= c.category.name %></h2>
 				<% end %>
