@@ -11,7 +11,7 @@ class ArticleCategory < ApplicationRecord
     				      AS sub GROUP BY category_id"
                 end
   scope :new_all, lambda {
-    where(id: find_by_sql(order_group)).includes(:category, article: [:author, {image_attachment: :blob}])
+    where(id: find_by_sql(order_group)).includes(:category, article: [:author, { image_attachment: :blob }])
   }
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc).group_by(:category_id) }

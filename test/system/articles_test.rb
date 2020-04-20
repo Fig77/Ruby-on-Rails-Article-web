@@ -14,6 +14,12 @@ class ArticlesTest < ApplicationSystemTestCase
     fill_in 'article_id', with: 'This, is an article, therefore I write'
     fill_in 'article_text', with: 'foobar' * 5
     click_on 'Create'
-    assert_equal request.fullpath, '/'
+    assert_equal request.fullpath, '/articles/4'
+  end
+
+  test 'vote article' do
+    get 'articles/1'
+    click_on 'Up vote !'
+    assert(articles(:article_1).votes == 1)
   end
 end

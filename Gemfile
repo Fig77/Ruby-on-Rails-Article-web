@@ -23,8 +23,8 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'cloudinary'
 gem 'devise'
 gem 'font-awesome-rails'
+gem 'paperclip'
 gem 'rack-mini-profiler'
-gem "paperclip"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -53,7 +53,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
