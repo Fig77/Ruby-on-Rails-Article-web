@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-`https://immense-plains-60294.herokuapp.com/`
+`https://vast-inlet-50954.herokuapp.com/`
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ Open `https://immense-plains-60294.herokuapp.com/` in your browser.
 
 ### Deployment
 
-`https://immense-plains-60294.herokuapp.com/`
+`https://vast-inlet-50954.herokuapp.com/`
 
 ## Authors
 
