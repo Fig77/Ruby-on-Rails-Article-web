@@ -18,9 +18,9 @@ gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-gem 'bullet', group: 'development'
 gem 'bcrypt'
 gem 'bootstrap-sass', '3.3.7'
+gem 'bullet', group: 'development'
 gem 'cloudinary'
 gem 'devise'
 gem 'font-awesome-rails'
