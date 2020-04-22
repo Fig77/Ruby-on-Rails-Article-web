@@ -7,7 +7,7 @@ class Vote < ApplicationRecord
       article.priority.nil? ? article.priority = 1 : article.priority += 1
       self[:positive] = true
     else
-      article.priority += -1
+      article.priority = article.priority - 1
       self[:positive] = false
     end
     article.save

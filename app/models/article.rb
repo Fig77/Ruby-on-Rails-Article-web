@@ -21,11 +21,6 @@ class Article < ApplicationRecord
     Category.find(selected).include(:articles).ordered_by_priority(number)
   end
 
-  def self.count_priority(num)
-    self.priority += num
-    update
-  end
-
   # Validations
 
   validates :text, length: { minimum: 70 }, presence: true

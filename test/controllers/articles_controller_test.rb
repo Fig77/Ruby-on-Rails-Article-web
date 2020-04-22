@@ -23,8 +23,4 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     get '/articles/new'
     assert_response :success
   end
-
-  test 'this is an n+1 query' do
-    articles(:article_1).author.username
-  end
 end

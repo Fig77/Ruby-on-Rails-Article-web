@@ -14,7 +14,23 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test 'feature will get the one with most votes' do
-    article = Article.feature.first
-    assert(article == articles(:article_1))
+    assert(Article.feature.first == articles(:article_1))
+    50.times do
+      Vote.new('user' => users(:u_1), 'article' => articles(:article_2)).save
+    end
+    assert(Article.feature.first == articles(:article_2), 'After 50 positive votes,
+      article number 2 should be featured')
+    150.times do
+      Vote.new('user' => users(:u_1), 'article' => articles(:article_1)).save
+    end
+    assert(Article.feature.first == articles(:article_1), 'After 150 positive votes,
+     article 1 should befeatured')
+    150.times do
+      last = Vote.last
+      last.positive = true
+      last.save
+    end
+    assert(Article.feature.first == articles(:article_2),
+           'After 150 downvotes article number 2 should be featured')
   end
 end
