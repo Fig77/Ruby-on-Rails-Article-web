@@ -1,6 +1,7 @@
 class ArticleCategory < ApplicationRecord
   belongs_to :category
   belongs_to :article
+
   order_group = if Rails.env.production?
                   "SELECT DISTINCT ON (category_id) id
                    FROM article_categories
