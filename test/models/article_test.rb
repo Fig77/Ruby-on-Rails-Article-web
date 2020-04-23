@@ -14,7 +14,8 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test 'feature will get the one with most votes' do
-    assert(Article.feature.first == articles(:article_1))
+    assert(Article.feature.first == articles(:article_1), 'Feature article should be
+      number one')
     50.times do
       Vote.new('user' => users(:u_1), 'article' => articles(:article_2)).save
     end
