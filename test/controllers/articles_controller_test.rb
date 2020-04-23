@@ -27,12 +27,11 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   test 'Index will get a hash with feature article and newest from each
   category' do
     get '/'
-    index_dat = {'feature'=>articles(:article_1),
-                 'new_from_categories' => [article_categories(:one),
-                  article_categories(:two)]
-               }
+    index_dat = { 'feature' => articles(:article_1),
+                  'new_from_categories' => [article_categories(:one),
+                                            article_categories(:two)] }
     assert(@controller.instance_variable_get(:@index_data) == index_dat,
-    'Index would not return the correct information.')
+           'Index would not return the correct information.')
   end
 
   test 'only valid articles should be created' do
