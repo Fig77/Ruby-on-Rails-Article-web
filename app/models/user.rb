@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :articles, foreign_key: :author_id
   has_many :votes
 
-  validates :username, length: { minimum: 3 }, presence: true, 
-  			uniqueness: true
+  validates :username, length: { minimum: 3 }, presence: true,
+                       uniqueness: true
 end
