@@ -17,7 +17,7 @@
 	<div class='divisor-div'> Votes: <%= @article.priority %></div>
 	   <span> Written by: <%= @article.author.username %> </span>
 	   <% unless current_user.nil? %>
-	   <%= button_to str_vote, article_path, params: { :article => @article.id }, method: :put, class: 'button-vote'%>
+	   <%= button_to str_vote, article_path, params: { vote: { :article_id => @article.id}}, method: :put, class: 'button-vote'%>
 	   <% end %>
 	  </div>
   </article>

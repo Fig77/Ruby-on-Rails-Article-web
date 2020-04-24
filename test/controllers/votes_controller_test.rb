@@ -10,9 +10,9 @@ class VotesControllerTest < ActionDispatch::IntegrationTest
 
   test 'will update not nil vote correctly' do
     get '/articles/1'
-    put article_path, params: { article: Article.first.id }
+    put article_path, params: { vote: { article_id: Article.second.id } }
     assert_not(votes(:two).positive, 'Bool should be false !')
-    put article_path, params: { article: Article.second.id }
+    put article_path, params: { vote: { article_id: Article.first.id } }
     assert(votes(:one).positive, 'Bool of article one should be true')
     assert(Article.feature.first == articles(:article_2),
            'Now featured should be article two !')

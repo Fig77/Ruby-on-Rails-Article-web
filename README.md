@@ -50,8 +50,9 @@ Open `https://immense-plains-60294.herokuapp.com/` in your browser.
 
 ### Run tests
 
+Unit test was used on this project for testing
 ```
-    rpsec --format documentation
+    run rails test for testing on console
 ```
 
 ### Deployment

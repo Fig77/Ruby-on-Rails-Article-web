@@ -1,4 +1,4 @@
-require 'test_helper'
+
 
 class VoteTest < ActiveSupport::TestCase
   test 'Votes relationship testing' do

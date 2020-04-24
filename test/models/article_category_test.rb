@@ -1,5 +1,3 @@
-require 'test_helper'
-
 class ArticleCategoryTest < ActiveSupport::TestCase
   test 'will return latest articles from each category' do
     artic = ArticleCategory.new_all

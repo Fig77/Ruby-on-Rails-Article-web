@@ -1,5 +1,3 @@
-require 'test_helper'
-
 class ArticleTest < ActiveSupport::TestCase
   test 'Article has one author' do
     assert(articles(:article_1).author.id == 1)
