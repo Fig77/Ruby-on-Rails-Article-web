@@ -9,10 +9,8 @@
 			<%= link_to article_path(@index_data['feature'].id) do %>
   				<h1><%= @index_data['feature'].title %></h1>
 			<% end %>
-		    <div class='d-flex-break'></div>
 		    <h3 class='author'> Written by <%= @index_data['feature'].author.username %> </h3>
-		    <div class='d-flex-break'></div>
-		    <p class='preview'><%= @index_data['feature'].text.truncate(95) %></p>
+		    <p class='bg-white d-inline'><%= @index_data['feature'].text.truncate(95) %></p>
 		    </div>
 		  </div>
 
@@ -20,20 +18,19 @@
 </section>
 <div class='default-grid-template m-top-1'>
   <section class= 'default-grid-template g-col-start-2 g-col-end-12 '>
-	<% @index_data['new_from_categories'].each do |c| %>
-		<div class = 'newest-index col-lg-4' style = "background:url(<%= url_for(c.article.image) if c.article.image.attached? %>) no-repeat; background-size: 100% 100%; object-fit: cover; background-position: center;">
-			<div class='m-left-1 d-flex d-flex-col preview-text d-flex-wrap'>
-				<%= link_to category_path(c.category.id) do %>
-  					<h2><%= c.category.name %></h2>
-				<% end %>
-			    <%= link_to article_path(c.article) do %>
-			      <h3> <%= c.article.title %></h3> 
-			    <% end %>
-			  <div class='d-flex-break'></div>
-			  <h3 class='author'> Written by <%= c.article.author.username %> </h3>
+  	<% @index_data['new_from_categories'].each do |c| %>
+  		<div class='text-overflow-hidden col-lg-4' style = "background:url(<%= url_for(c.article.image) if c.article.image.attached? %>) no-repeat; background-size: 100% 100%; object-fit: cover; background-position: center;">
+  			<div class='text-container-article-p text-overflow-hidden'>
+  			  <%= link_to category_path(c.category.id) do %>
+  				  <h2 class='bg-white d-inline'><%= c.category.name %></h2>
+			  <% end %>
+			  <%= link_to article_path(c.article) do %>
+			      <h3 class='m-0 bg-white d-inline'> <%= c.article.title %></h3> 
+			  <% end %>
+			  <h3 class='author bg-white d-inline'> Written by <%= c.article.author.username %> </h3>
 			</div>
-		</div>
-	<% end %>
+  		</div>
+  	<% end %>
   </section>
 </div>
 <% end %>

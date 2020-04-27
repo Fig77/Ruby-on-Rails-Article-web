@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature 'from login to create to vote to index again', type: :feature do
+RSpec.feature 'Will test flow from failed login, to create an
+ account and an article', type: :feature do
 	before do
 		@user = User.create('username' => 'foo', 'password' => 'foobar',
 		 'email' => 'foo@bar.com')
@@ -11,7 +12,7 @@ RSpec.feature 'from login to create to vote to index again', type: :feature do
 
 	end
 
-	scenario 'login-fail-signup-successfull-logout' do
+	scenario 'Try to login, fail, create an account, and get logged afterwards.' do
 		visit '/users/sign_in'
 		fill_in 'user_username', with: @user_1.username
 		fill_in 'user_password', with: @user_1.password
@@ -27,7 +28,8 @@ RSpec.feature 'from login to create to vote to index again', type: :feature do
 		click_link 'Logout'
 	end
 
-	scenario 'login-create-vote' do
+	scenario 'Login with an already created account, create an article,
+	will vote this article, after seing that working will downvoted.' do
 		visit '/'
 		click_link 'New'
 		fill_in 'user_username', with: @user.username
