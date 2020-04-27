@@ -50,9 +50,23 @@ Open `https://immense-plains-60294.herokuapp.com/` in your browser.
 
 ### Run tests
 
+Unit test was used on this project for testing models and controllers
+RSpec was used for testing login - account creation - article creation and 
+vote action.
+
 ```
-    rpsec --format documentation
+    run rails test for testing on console
+    run rails test -v to see verbose version (shoing what is testing)
+    run bundle exec rspec for running flow test written on RSpec
+    run bundle exec rspec spec --format documentation to read the test that will
+    be running for rspec.
+
+    Small article creation integration test was also written in unit-test
 ```
+
+### Known issue
+
+Updated rails 6.0 version brought a warning showing during test which could not be fixed properly yet, regarding some autoloading feature not being remove either init configurations or inside app.
 
 ### Deployment
 

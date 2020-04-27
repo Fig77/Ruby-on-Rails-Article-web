@@ -1,13 +1,18 @@
+
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.article {
+	padding-bottom: 5%;
+}
 
 .field-article {
 	border-style: none;
 	border-bottom-style: solid;
 	border-bottom-width: thin;
 	border-bottom-color: #757575;
-	font-size: 200%;
+	font-size: 180%;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	width: 57vw;
@@ -16,6 +21,7 @@
 
 .field-title {
     height: 1.4em;
+    font-size: 2.2vw;
 }
 
 .field-box {

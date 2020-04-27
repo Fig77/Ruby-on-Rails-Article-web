@@ -1,5 +1,3 @@
-require 'test_helper'
-
 class VoteTest < ActiveSupport::TestCase
   test 'Votes relationship testing' do
     assert(votes(:one).article == articles(:article_1),

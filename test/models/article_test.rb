@@ -1,5 +1,3 @@
-require 'test_helper'
-
 class ArticleTest < ActiveSupport::TestCase
   test 'Article has one author' do
     assert(articles(:article_1).author.id == 1)
@@ -13,7 +11,9 @@ class ArticleTest < ActiveSupport::TestCase
     assert_equal(2, articles(:article_1).votes.count)
   end
 
-  test 'feature will get the one with most votes' do
+  test 'feature will get the one with most votes, will update correctly
+  after changing other article to feature, and removing then this new votes
+  to this new feature article.' do
     assert(Article.feature.first == articles(:article_1), 'Feature article should be
       number one')
     50.times do
