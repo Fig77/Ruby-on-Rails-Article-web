@@ -14,4 +14,3 @@ class VotesController < ApplicationController
     params.require(:vote).permit(:article_id)
   end
 end
-

@@ -7,4 +7,3 @@ module ApplicationHelper
     current_user.votes.find_by(article_id: idd)
   end
 end
-
