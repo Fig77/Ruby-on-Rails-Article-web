@@ -59,6 +59,9 @@ body {
 }
 
 @media screen and (min-width: 720px) and (max-width: 1024px) {
+  .field-login, .field-create {
+  width: 60vw;
+  }
 
 @for $i from 1 through 12 {
   .col-md-#{$i} { grid-column: span $i; }
@@ -71,6 +74,9 @@ body {
 }
 
 @media screen and (max-width: 719px) {
+.field-login, .field-create {
+  width: 80vw;
+  }
  .d-none {
   display: none;
  }
@@ -92,6 +98,13 @@ body {
     padding-top: 4%;
     padding-bottom: 4%;
   }
+}
+
+.footer-box {
+  div {
+    font-size: 250%;
+  }
+  
 }
 }
 

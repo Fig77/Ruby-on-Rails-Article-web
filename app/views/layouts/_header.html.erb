@@ -11,10 +11,11 @@
         <%= link_to('Log in!', user_session_path, method: :get) %>
         <% end %>
       </li>
-      <li class='col-lg-2 col-sm-6 d-flex default-link justify-c-center align-i-center'>
+      <li class='col-lg-2 col-sm-6 d-flex default-link justify-c-center align-i-center'><%= link_to('Home', root_path) %> </li>
+      <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'>
         <%= link_to('New', new_article_path, method: :get) %>
       </li> 
-        <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to('Home', root_path) %> </li>
+
         <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to 'Reviews', category_path(1) %></li>
         <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to 'Analysis', category_path(2) %></li>
         <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to 'Upcoming', category_path(3) %></li>

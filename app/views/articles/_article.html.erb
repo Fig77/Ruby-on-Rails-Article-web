@@ -3,7 +3,7 @@
 <% str_vote = (vote.nil? || !vote) ? 'Up vote !' : 'Down vote' %>
 <% end %>
 <% unless @article.nil? %>
-  <article class = 'default-grid-template'>
+  <article class = 'default-grid-template article'>
   	<div class = 'g-col-start-3 g-col-end-10'>
 	  <div class= 'field-article'> <%= @article.title %> </div>
 	  <div >

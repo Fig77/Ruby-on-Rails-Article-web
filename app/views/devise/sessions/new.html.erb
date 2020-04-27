@@ -1,11 +1,11 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class='default-grid-template'>
-  <div class='g-col-start-6 g-col-end-10'>
+  <div class='g-col-start-6 g-col-end-10 g-col-sm-start-1 g-col-md-start-1'>
 
     <div class='d-flex d-flex-col'>
       <div class='container_user_forms d-flex-center'>
-        <h2 class='d-flex d-flex-center justify-c-center'>Welcome </h2>
+        <h2 class='d-flex d-flex-center '>Welcome </h2>
         <div class="field">
           <%= f.text_field :username, autofocus: true, autocomplete: "username", class:'field-login field-title', placeholder: 'username'%>
         </div>
