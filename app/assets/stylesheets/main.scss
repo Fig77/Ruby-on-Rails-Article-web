@@ -15,11 +15,10 @@ body {
   text-decoration: inherit; /* no underline */
   }  
   text-wrap: word-break;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header {
-	height: 58px;
 	border-top-style: solid;
 	border-bottom-style: solid;
 	border-color: $gray-main;
@@ -39,6 +38,17 @@ body {
   grid-column: span  12;
 }
 
+@media screen and (min-width: 1024px) {
+  @for $i from 1 through 12 {
+  .col-lg-#{$i} { grid-column: span $i; }
+  .g-col-lg-gap-#{$i} { grid-column-gap: $i*1%; }
+  .g-row-lg-start-#{$i} { grid-row-start: $i; }
+  .g-row-lg-end-#{$i}{ grid-row-end: $i; }
+  .g-col-lg-start-#{$i} { grid-column-start: $i; }
+  .g-col-lg-end-#{$i} { grid-column-end: $i; }
+}
+}
+
 @for $i from 1 through 12 {
   .col-lg-#{$i} { grid-column: span $i; }
   .g-col-gap-#{$i} { grid-column-gap: $i*1%; }
@@ -46,6 +56,43 @@ body {
   .g-row-end-#{$i}{ grid-row-end: $i; }
   .g-col-start-#{$i} { grid-column-start: $i; }
   .g-col-end-#{$i} { grid-column-end: $i; }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+
+@for $i from 1 through 12 {
+  .col-md-#{$i} { grid-column: span $i; }
+  .g-col-md-gap-#{$i} { grid-column-gap: $i*1%; }
+  .g-row-md-start-#{$i} { grid-row-start: $i; }
+  .g-row-md-end-#{$i}{ grid-row-end: $i; }
+  .g-col-md-start-#{$i} { grid-column-start: $i; }
+  .g-col-md-end-#{$i} { grid-column-end: $i; }
+}
+}
+
+@media screen and (max-width: 719px) {
+ .d-none {
+  display: none;
+ }
+@for $i from 1 through 12 {
+  .col-sm-#{$i} { grid-column: span $i; }
+  .g-col-sm-gap-#{$i} { grid-column-gap: $i*1%; }
+  .g-row-sm-start-#{$i} { grid-row-start: $i; }
+  .g-row-sm-end-#{$i}{ grid-row-end: $i; }
+  .g-col-sm-start-#{$i} { grid-column-start: $i; }
+  .g-col-sm-end-#{$i} { grid-column-end: $i; }
+}
+
+.header {
+  li {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    margin: 1%;
+    border-width: thin;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+}
 }
 
 .place-g-center {
@@ -60,7 +107,6 @@ body {
 .align-i-center {
   align-items: center;
 }
-
 
 .d-flex {
   display: flex;
@@ -94,7 +140,6 @@ body {
 	float: right;
 	margin-right: 50%;
 }
-
  ul {
  	margin-top: 17px;
  	list-style-type: none;
@@ -119,6 +164,7 @@ body {
 .preview-text {
   position: absolute;
   bottom: 0;
+  margin-bottom: 1%;
 
   h1, h2, h3 {
     background-color: white;

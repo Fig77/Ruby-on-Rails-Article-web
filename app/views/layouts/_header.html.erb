@@ -1,23 +1,24 @@
 <header class='header'>
   <nav class='default-grid-template'>
-    <div class='col-lg-4'>
+    <div class='col-lg-4 d-none'>
       <%= image_tag("bisde-03.png", class: 'logo')%>
     </div>
-    <ul class='default-grid-template col-lg-8'>
-      <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>
+    <ul class='default-grid-template col-lg-8 col-sm-12'>
+      <li class='col-lg-2 col-sm-6 d-flex default-link justify-c-center align-i-center'>
         <% unless current_user.nil? %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
         <% else %>
         <%= link_to('Log in!', user_session_path, method: :get) %>
         <% end %>
       </li>
-        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'><%= link_to('Home', root_path) %> </li>
-        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'><%= link_to 'Reviews', category_path(1) %></li>
-        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'><%= link_to 'Analysis', category_path(2) %></li>
-        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'><%= link_to 'Upcoming', category_path(3) %></li>
-        <li class='col-lg-2 d-flex default-link justify-c-center align-i-center'>
+      <li class='col-lg-2 col-sm-6 d-flex default-link justify-c-center align-i-center'>
         <%= link_to('New', new_article_path, method: :get) %>
       </li> 
+        <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to('Home', root_path) %> </li>
+        <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to 'Reviews', category_path(1) %></li>
+        <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to 'Analysis', category_path(2) %></li>
+        <li class='col-lg-2 col-sm-3 d-flex default-link justify-c-center align-i-center'><%= link_to 'Upcoming', category_path(3) %></li>
+
     </ul>
   </nav>
 </header>
