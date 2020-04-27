@@ -58,10 +58,11 @@ body {
   .g-col-end-#{$i} { grid-column-end: $i; }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1024px) {
+@media screen and (min-width: 800px) and (max-width: 1024px) {
   .field-login, .field-create {
   width: 60vw;
   }
+
 
 @for $i from 1 through 12 {
   .col-md-#{$i} { grid-column: span $i; }
@@ -73,13 +74,22 @@ body {
 }
 }
 
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 799px) {
 .field-login, .field-create {
   width: 80vw;
   }
  .d-none {
   display: none;
  }
+
+ .footer-inner {
+  font-size: 90%;
+ }
+
+ .footer-inner:nth-last-of-type(1) {
+  grid-column-start: 2;
+  grid-column-end: 12;
+}
 @for $i from 1 through 12 {
   .col-sm-#{$i} { grid-column: span $i; }
   .g-col-sm-gap-#{$i} { grid-column-gap: $i*1%; }
@@ -275,7 +285,6 @@ body {
   border-width: thin;
   border-color: $black-main;
   font-size: 1.5vw;
-
 }
 
 .text-a-center
