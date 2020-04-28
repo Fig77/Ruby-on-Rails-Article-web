@@ -8,6 +8,11 @@ class VotesControllerTest < ActionDispatch::IntegrationTest
     post user_session_url
   end
 
+  # Assertions on this test case strictly change and depends on previous action.
+  # Breaking it would not reflect this unless you re-write the change for the specific
+  # assertion that would prove in essence, that existing votes are not being correctly
+  # updated.
+
   test 'will update not nil vote correctly' do
     get '/articles/1'
     put article_path, params: { vote: { article_id: Article.second.id } }

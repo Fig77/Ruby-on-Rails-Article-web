@@ -34,11 +34,14 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
            'Index would not return the correct information.')
   end
 
-  test 'only valid articles should be created' do
+  test 'Valid article can be created' do
     post articles_path, params: { article: { 'title' => 'valid' * 2, 'text' => 'asd' * 25,
                                              'category_ids' => [1] } }
     assert(Category.find_by_id(1).articles.order(created_at: :desc).first.title == 'valid' * 2,
            'Article created does not exist')
+  end
+
+  test 'Invalid article should not be created' do
     post articles_path, params: { article: { 'title' => 'NONOMRCHANG', 'text' => '',
                                              'category_ids' => [1] } }
     assert_not(Category.find_by_id(1).articles.order(created_at: :desc).first.title == 'NONOMRCHANG',

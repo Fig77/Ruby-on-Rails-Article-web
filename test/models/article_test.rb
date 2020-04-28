@@ -11,6 +11,12 @@ class ArticleTest < ActiveSupport::TestCase
     assert_equal(2, articles(:article_1).votes.count)
   end
 
+  # This assertions will and need to strictly change after certain actions
+  # Than can have several cases, and the flow of those changes can be perfectly
+  # seen on one test, and dividing into more could actually be more confusing.
+  # Since redability is a subjective matter, at least for this particular case
+  # Unless involves a techincal advantage I think it better this way.
+
   test 'feature will get the one with most votes, will update correctly
   after changing other article to feature, and removing then this new votes
   to this new feature article.' do

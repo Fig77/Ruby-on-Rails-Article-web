@@ -3,7 +3,7 @@
     <div class='col-lg-4 d-none'>
       <%= image_tag("bisde-03.png", class: 'logo')%>
     </div>
-    <ul class='default-grid-template col-lg-8 col-sm-12'>
+    <ul id='ulNavbar' class='default-grid-template col-lg-8 col-sm-12'>
       <li class='col-lg-2 col-sm-12 d-flex default-link justify-c-center align-i-center'>
         <% unless current_user.nil? %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>

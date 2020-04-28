@@ -57,22 +57,43 @@ an article', type: :feature do
   end
 end
 
-
-RSpec.feature 'Will test that articles of each category appear are they 
-are shown on category/1 /2 /3', type: :feature do 
+RSpec.feature 'Will test that articles of each category appear are they
+are shown on category/1 /2 /3', type: :feature do
   before do
     @user = User.create('username' => 'foo', 'password' => 'foobar',
                         'email' => 'foo@bar.com')
-    categories = %w[Analysis Upcoming Reviews]
+    categories = %w[Reviews Analysis Upcoming]
     categories.each { |x| Category.new('name' => x).save }
-    @user.articles.new('title' => 'analysiss', 'text' => 'hola'*25, 'category_ids' => [1])
-    @user.articles.new('title' => 'upcomingg', 'text' => 'hola'*25, 'category_ids' => [2])
-    @user.articles.new('title' => 'reviewss', 'text' => 'hola'*25, 'category_ids' => [3])
+    @user.articles.create('title' => 'analysi22', 'text' => 'hola' * 25, 'category_ids' => [2])
+    @user.articles.create('title' => 'upcomin11', 'text' => 'hola' * 25, 'category_ids' => [3])
+    @user.articles.create('title' => 'reviews33', 'text' => 'hola' * 25, 'category_ids' => [1])
   end
 
   scenario 'User will get to index. User will click on the category name
   on nav bar, and find articles for that category' do
-    get '/'
+    visit '/'
+    within('#ulNavbar') do
+      click_link 'Upcoming'
+    end
+    expect(page).to have_text('upcomin11')
+    expect(page).to have_no_text('analysi22')
+  end
 
+  scenario 'User will create a new article, assign a category. Visit said category, and
+  accessing his new article through that link' do
+    visit '/'
+    click_link 'Log in!'
+    fill_in 'user_username', with: @user.username
+    fill_in 'user_password', with: @user.password
+    click_button 'commit'
+    click_link 'New'
+    fill_in 'article_title', with: 'name' * 2
+    fill_in 'article_text', with: 'text' * 100
+    check('Analysis')
+    click_button 'Create Article'
+    click_link 'Analysis'
+    expect(page).to have_text('name' * 2)
+    click_link 'name' * 2
+    expect(page).to have_text('text' * 100)
   end
 end
