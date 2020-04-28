@@ -61,9 +61,18 @@ end
 RSpec.feature 'Will test that articles of each category appear are they 
 are shown on category/1 /2 /3', type: :feature do 
   before do
+    @user = User.create('username' => 'foo', 'password' => 'foobar',
+                        'email' => 'foo@bar.com')
+    categories = %w[Analysis Upcoming Reviews]
+    categories.each { |x| Category.new('name' => x).save }
+    @user.articles.new('title' => 'analysiss', 'text' => 'hola'*25, 'category_ids' => [1])
+    @user.articles.new('title' => 'upcomingg', 'text' => 'hola'*25, 'category_ids' => [2])
+    @user.articles.new('title' => 'reviewss', 'text' => 'hola'*25, 'category_ids' => [3])
   end
 
-  scenario 'User will get to index and login. User will click on the category name
+  scenario 'User will get to index. User will click on the category name
   on nav bar, and find articles for that category' do
+    get '/'
+
   end
 end
