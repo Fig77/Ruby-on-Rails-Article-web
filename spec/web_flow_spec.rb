@@ -78,7 +78,16 @@ are shown on category/1 /2 /3', type: :feature do
     expect(page).to have_text('upcomin11')
     expect(page).to have_no_text('analysi22')
   end
+end
 
+RSpec.feature 'Will test that a new article with appear on his rightful category' do
+  before do
+    @user = User.create('username' => 'foo', 'password' => 'foobar',
+                        'email' => 'foo@bar.com')
+    categories = %w[Reviews Analysis Upcoming]
+    categories.each { |x| Category.new('name' => x).save }
+    @user.articles.create('title' => 'analysi22', 'text' => 'hola' * 25, 'category_ids' => [2])
+  end
   scenario 'User will create a new article, assign a category. Visit said category, and
   accessing his new article through that link' do
     visit '/'

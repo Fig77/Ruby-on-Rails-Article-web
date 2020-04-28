@@ -64,6 +64,12 @@ vote action.
     Small article creation integration test was also written in unit-test
 ```
 
+### Bugs you may find !
+
+Anything weird happening somewhere that you wish to report it, please do while stating
+how to replicate this bug, what did you tried to do and what message (if any) did appear.
+Thank you ! :green_heart: :green_heart:
+
 ### Known issue
 
 Updated rails 6.0 version brought a warning showing during test which could not be fixed properly yet, regarding some autoloading feature not being remove either init configurations or inside app.

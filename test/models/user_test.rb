@@ -6,7 +6,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'User can create an article and assign it to himself' do
-  	users(:u_1).articles.new('title' => 'a' * 50, 'text' => 't' * 150).save
+    users(:u_1).articles.new('title' => 'a' * 50, 'text' => 't' * 150).save
     assert(users(:u_1).articles.count == 3,
            'User could not create an article an assign it to himself')
   end
