@@ -1,6 +1,6 @@
 require_relative 'boot'
-
 require 'rails/all'
+ActiveSupport::Deprecation.debug = true
 Bundler.require(*Rails.groups)
 
 module RoRCapstonProject

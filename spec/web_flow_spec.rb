@@ -56,3 +56,14 @@ an article', type: :feature do
     expect(page).to have_text('Votes: 0')
   end
 end
+
+
+RSpec.feature 'Will test that articles of each category appear are they 
+are shown on category/1 /2 /3', type: :feature do 
+  before do
+  end
+
+  scenario 'User will get to index and login. User will click on the category name
+  on nav bar, and find articles for that category' do
+  end
+end
