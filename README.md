@@ -56,13 +56,14 @@ vote action.
 
 ```
     run rails test for testing on console
-    run rails test -v to see verbose version (shoing what is testing)
-    run bundle exec rspec for running flow test written on RSpec
+    run rails test -v to see verbose version (showing what is testing)
+    run bundle exec rspec for running integration test written on RSpec
     run bundle exec rspec spec --format documentation to read the test that will
     be running for rspec.
 
     Small article creation integration test was also written in unit-test
 ```
+**Read below if a test error showed !**
 
 ### Bugs you may find !
 
