@@ -1,0 +1,4 @@
+class HoldersController < ApplicationController
+
+end
+

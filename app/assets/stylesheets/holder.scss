@@ -1,0 +1,25 @@
+.holder {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('bisde-02.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  contain;
+
+}
+
+.holder > h1 {
+	color: #212121;
+	font-size: 3vw;
+	font-weight: 800;
+	background-color: #fafafa;
+}
+
+@media (max-width: 500px) {
+.holder > h1 {
+	font-size: 6vw;
+	font-weight: 800;
+	background-color: #fafafa;
+	}
+}
