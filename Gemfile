@@ -20,7 +20,7 @@ gem 'jbuilder'
 gem 'rspec-rails'
 # Use Active Model has_secure_password
 gem 'bcrypt'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 gem 'bullet', group: 'development'
 gem 'cloudinary'
 gem 'devise'
