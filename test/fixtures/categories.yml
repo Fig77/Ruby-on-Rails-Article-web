@@ -1,0 +1,22 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+upcoming:
+  id: 0
+  name: Upcoming
+  priority: 1
+
+review:
+  id: 1
+  name: Review
+  priority: 1
+
+analysis:
+  id: 2
+  name: Analysis
+  priority: 1
+
+tops:
+  id: 3
+  name: tops
+  priority: 1
+  

@@ -1,0 +1,27 @@
+<div class='default-grid-template'>
+  <div class='g-col-start-4 g-col-end-10'>
+    <%= form_for @article do |article| %>
+      <div class="field">
+        <%= article.text_field :title, autofocus: false, class:'field-article field-title', placeholder: 'Title', :maxlength => '55'%>
+      </div>
+      <div>
+        <%= article.file_field :image, direct_upload: true%>
+      </div>
+      <div class="field">
+        <%= article.text_area :text, autofocus: false, placeholder: 'A slightly good idea... ', class:'field-article field-box'%>
+      </div>
+      <div class='d-flex field-tags'>
+      <%= article.collection_check_boxes :category_ids,
+      Category.all, :id, :name do |x| %>
+        <span class='check-box span-check'>
+          <%= x.check_box %>
+        </span>
+        <%= x.label %>
+      <% end %>
+      </div>
+      <div>
+        <%= article.submit class: 'field-article field-create'%>
+      </div>
+  <% end %>
+ </div> 
+</div>

@@ -1,24 +1,94 @@
-# README
+# Ruby on Rails Articles project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This project emulates an article posting/sharing website. Functions implemented are constraint to register, login, post new article, read them, and vote for them.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby v2.6.5
+- Ruby on Rails v5.2.4
 
-* System dependencies
+## Live Demo
 
-* Configuration
+`https://vast-inlet-50954.herokuapp.com/`
 
-* Database creation
+## Getting Started
 
-* Database initialization
+Local copy can be initialized following a few steps: 
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+Ruby: 2.6.3
+Rails: 5.2.3
+Postgres: >=9.5
 
-* Deployment instructions
+### Setup
 
-* ...
+Instal gems with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+Open `https://immense-plains-60294.herokuapp.com/` in your browser.
+
+### Run tests
+
+Unit test was used on this project for testing models and controllers
+RSpec was used for testing login - account creation - article creation and 
+vote action.
+
+```
+    run rails test for testing on console
+    run rails test -v to see verbose version (showing what is testing)
+    run bundle exec rspec for running integration test written on RSpec
+    run bundle exec rspec spec --format documentation to read the test that will
+    be running for rspec.
+
+    Small article creation integration test was also written in unit-test
+```
+**Read below if a test error showed !**
+
+### Bugs you may find !
+
+Anything weird happening somewhere that you wish to report it, please do while stating
+how to replicate this bug, what did you tried to do and what message (if any) did appear.
+Thank you ! :green_heart: :green_heart:
+
+### Known issue
+
+Updated rails 6.0 version brought a warning showing during test which could not be fixed properly yet, regarding some autoloading feature not being remove either init configurations or inside app.
+
+### Deployment
+
+`https://vast-inlet-50954.herokuapp.com/`
+
+## Authors
+
+Facundo Iglesias: `https://github.com/Fig77`
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!

@@ -1,0 +1,15 @@
+<% unless article.nil? %>
+  <article class = 'default-grid-template m-1 border-bot-1 p-1 set-height-400'>
+  	<div class = 'col-lg-3'>
+	   <%= image_tag article.image, class: 'article-title-pic max-height-400 max-width-400' if article.image.attached?%>
+	</div>
+	<div class= 'col-lg-9'>
+		<div>
+		<%= link_to article_path(article.id) do %>
+  				<h1 class='d-table'><%= article.title %></h1>
+		<% end %>
+		<h3 class='author'> Written by <%= article.author.username %> </h3>
+		<p class='preview'><%= article.text.truncate(50) %></p>
+	</div>
+  </article>
+<%end%>

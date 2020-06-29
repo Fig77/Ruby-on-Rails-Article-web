@@ -4,12 +4,24 @@
     <title>RoRCapstonProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap'  %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+    <% flash.each do |msg| %>
+      <% if notice%>
+       <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    <% end %>
     <%= yield %>
-  </body>
+    <%= render 'layouts/footer' %>
+    </body>
+
 </html>
+
