@@ -1,6 +1,11 @@
 # Ruby on Rails Articles project
 
-> This project emulates an article posting/sharing website. Functions implemented are constraint to register, login, post new article, read them, and vote for them.
+<br>
+<br>
+
+![screenshot](devicespng.png)
+
+> This project emulates an article posting/sharing website. Functions implemented are constraint to register, login, post new articles, read them, and vote for them.
 
 ## Built With
 
