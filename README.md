@@ -2,6 +2,7 @@
 [![Issues][issues-shield]][issues-url]
 <br />
 <p align="center">
+  <img src="devicespng.png" alt="Here you can put a header picture" width="718" height="394">
   <h2 align="center"> Articles project </h2>
   <p align="center">
   	 Web app that lets you create articles (RoR ♦️)
@@ -9,8 +10,6 @@
     <a href="https://github.com/Fig77/Ruby-on-Rails-Article-web"><strong>Explore the docs »</strong></a>
     <br />
 </p>
-
-![screenshot](devicespng.png)
 
 # Ruby on Rails Articles project
 
@@ -69,7 +68,7 @@ Open `https://immense-plains-60294.herokuapp.com/` in your browser.
 
 `https://vast-inlet-50954.herokuapp.com/`
 
-## Tests
+## Testing
 
 Unit test was used on this project for testing models and controllers
 RSpec was used for testing login - account creation - article creation and 
