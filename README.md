@@ -1,47 +1,59 @@
-# Ruby on Rails Articles project
-
-<br>
-<br>
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+<br />
+<p align="center">
+  <h2 align="center"> Articles project </h2>
+  <p align="center">
+  	 Web app that lets you create articles (RoR ♦️)
+    <br />
+    <a href="https://github.com/Fig77/Ruby-on-Rails-Article-web"><strong>Explore the docs »</strong></a>
+    <br />
+</p>
 
 ![screenshot](devicespng.png)
 
-> This project emulates an article posting/sharing website. Functions implemented are constraint to register, login, post new articles, read them, and vote for them.
+# Ruby on Rails Articles project
+
+This project emulates an article posting/sharing website. Functions implemented are constraint to register, login, post new articles, read them, and vote for them.
+
+Index
+=====
+   * [Installation](#installation)
+     - [Prerequisites](#prerequisites)
+   * [Usage](#usage)
+      - [Screenshots](#screenshots)
+      - [Live](#live)
+   * [Testing](#testing)
+   * [Credits](#credits)
+   * [Contributing](#contributing)
+
+
 
 ## Built With
 
 - Ruby v2.6.5
 - Ruby on Rails v5.2.4
 
-## Live Demo
 
-`https://vast-inlet-50954.herokuapp.com/`
-
-## Getting Started
-
-Local copy can be initialized following a few steps: 
-
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
+## Installation
 
 ```
 bundle install
 ```
-
 Setup database with:
 
 ```
    rails db:create
    rails db:migrate
 ```
+### Prerequisites
 
-### Usage
+Ruby: 2.6.3
+Rails: 5.2.3
+Postgres: >=9.5
+
+
+## Usage
 
 Start server with:
 
@@ -53,7 +65,11 @@ Open `http://localhost:3000/` in your browser.
 
 Open `https://immense-plains-60294.herokuapp.com/` in your browser.
 
-### Run tests
+## Live Demo
+
+`https://vast-inlet-50954.herokuapp.com/`
+
+## Tests
 
 Unit test was used on this project for testing models and controllers
 RSpec was used for testing login - account creation - article creation and 
@@ -76,13 +92,6 @@ Anything weird happening somewhere that you wish to report it, please do while s
 how to replicate this bug, what did you tried to do and what message (if any) did appear.
 Thank you ! :green_heart: :green_heart:
 
-### Known issue
-
-Updated rails 6.0 version brought a warning showing during test which could not be fixed properly yet, regarding some autoloading feature not being remove either init configurations or inside app.
-
-### Deployment
-
-`https://vast-inlet-50954.herokuapp.com/`
 
 ## Authors
 
@@ -94,6 +103,13 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
-## Show your support
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-Give a ⭐️ if you like this project!
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-brightgreen
+[contributors-url]: https://github.com/Fig77/Gradients-Project/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/Fig77/Template/issues
+[product-screenshot]: assets/menu.png
