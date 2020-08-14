@@ -100,7 +100,7 @@ Thank you ! :green_heart: :green_heart:
 
 * Facundo Iglesias - [Github profile](https://github.com/Fig77)
 * Email - fig.igle@gmail.com
-* LinkedIn - linkedin.com/in/figlesias.com
+* LinkedIn - https://linkedin.com/in/figlesias.com
 
 ## Future Improvements
 
