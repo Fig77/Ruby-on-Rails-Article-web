@@ -31,6 +31,9 @@ Index
 
 - Ruby v2.6.5
 - Ruby on Rails v5.2.4
+- Webpack
+- SASS (for grid structure)
+- HTML/CSS
 
 ## Installation
 
