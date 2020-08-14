@@ -13,7 +13,7 @@
 
 # Ruby on Rails Articles project
 
-A generic concept of a Website that will let users read and write articles. Users can create an account, post their articles, and rate other articles posted on the website. Made with Ruby on Rails.
+A website concept that will let users read and write articles, after creating an account, users can post and rate them. Made with Ruby on Rails.
 
 Index
 =====
