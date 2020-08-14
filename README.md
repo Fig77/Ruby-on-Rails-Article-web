@@ -17,6 +17,7 @@ This project emulates an article posting/sharing website. Functions implemented 
 
 Index
 =====
+   * [Built Wit](#built-with)
    * [Installation](#installation)
      - [Prerequisites](#prerequisites)
    * [Usage](#usage)
@@ -26,15 +27,20 @@ Index
    * [Credits](#credits)
    * [Contributing](#contributing)
 
-
-
 ## Built With
 
 - Ruby v2.6.5
 - Ruby on Rails v5.2.4
 
-
 ## Installation
+
+### Prerequisites
+
+Ruby: 2.6.3
+Rails: 5.2.3
+Postgres: >=9.5
+
+---
 
 ```
 bundle install
@@ -45,12 +51,6 @@ Setup database with:
    rails db:create
    rails db:migrate
 ```
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
 
 ## Usage
 
@@ -90,7 +90,6 @@ vote action.
 Anything weird happening somewhere that you wish to report it, please do while stating
 how to replicate this bug, what did you tried to do and what message (if any) did appear.
 Thank you ! :green_heart: :green_heart:
-
 
 ## Authors
 
