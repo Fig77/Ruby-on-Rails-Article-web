@@ -2,7 +2,7 @@
 [![Issues][issues-shield]][issues-url]
 <br />
 <p align="center">
-  <img src="devicespng.png" alt="Here you can put a header picture" width="718" height="394">
+  <img src="devicespng.png" alt="Here you can put a header picture" width="660" height="394">
   <h2 align="center"> Articles project </h2>
   <p align="center">
   	 Web app that lets you create articles (RoR ♦️)
