@@ -96,7 +96,7 @@ how to replicate this bug, what did you tried to do and what message (if any) di
 Thank you ! :green_heart: :green_heart:
 
 <!-- CONTACT -->
-## Contact 📱
+## Contact📱
 
 * Facundo Iglesias - [Github profile](https://github.com/Fig77)
 * Email - fig.igle@gmail.com
