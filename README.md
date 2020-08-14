@@ -25,6 +25,7 @@ Index
       - [Live](#live)
    * [Testing](#testing)
    * [Future Improvements](#future-improvements)
+   * [Contributing](#contributing)
    * [Contact](#contact)
    * [License](#license)
 
@@ -109,7 +110,14 @@ Thank you ! :green_heart: :green_heart:
 
 Feel free to check the [issues page](issues/) for issues and proposed features.
 
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
