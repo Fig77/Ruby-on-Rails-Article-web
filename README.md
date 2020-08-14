@@ -25,6 +25,7 @@ Index
       - [Live](#live)
    * [Testing](#testing)
    * [Future Improvements](#future-improvements)
+   * [Contact](#contact)
    * [License](#license)
 
 ## Built With
@@ -94,9 +95,12 @@ Anything weird happening somewhere that you wish to report it, please do while s
 how to replicate this bug, what did you tried to do and what message (if any) did appear.
 Thank you ! :green_heart: :green_heart:
 
-## Authors
+<!-- CONTACT -->
+## Contact 📱
 
-Facundo Iglesias: `https://github.com/Fig77`
+* Facundo Iglesias - [Github profile](https://github.com/Fig77)
+* Email - fig.igle@gmail.com
+* LinkedIn - linkedin.com/in/figlesias.com
 
 ## Future Improvements
 
