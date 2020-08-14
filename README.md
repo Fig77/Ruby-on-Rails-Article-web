@@ -13,8 +13,7 @@
 
 # Ruby on Rails Articles project
 
-This project emulates an article posting/sharing website. Functions implemented are constraint to register, login, post new articles, read them, and vote for them.
-
+A generic concept of a Website that will let users read and write articles. Users can create an account, post their articles, and rate other articles posted on the website. Made with Ruby on Rails.
 Index
 =====
    * [Built Wit](#built-with)
@@ -24,8 +23,8 @@ Index
       - [Screenshots](#screenshots)
       - [Live](#live)
    * [Testing](#testing)
-   * [Credits](#credits)
-   * [Contributing](#contributing)
+   * [Future Improvements](#future-improvements)
+   * [License](#license)
 
 ## Built With
 
@@ -98,11 +97,12 @@ Thank you ! :green_heart: :green_heart:
 
 Facundo Iglesias: `https://github.com/Fig77`
 
-## 🤝 Contributing
+## Future Improvements
 
-Contributions, issues and feature requests are welcome!
+* Update on UI
+* Add rich text format to the article creation action.
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](issues/) for issues and proposed features.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
