@@ -71,7 +71,7 @@ Open `https://immense-plains-60294.herokuapp.com/` in your browser.
 
 ## Live Demo
 
-`https://vast-inlet-50954.herokuapp.com/`
+`https://articles-posting.herokuapp.com/`
 
 ## Testing
 
